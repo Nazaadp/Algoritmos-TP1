@@ -2,7 +2,7 @@
 #define TABLAHASH_H
 
 #include <string>
-#include <entidades/Estacion.h>
+#include "entidades/Estacion.h"
 
 struct NodoHash {
 
@@ -26,6 +26,7 @@ class TablaHash {
         ~TablaHash();
 
         bool insertar(Estacion* estacion);
+        bool eliminar(std::string codigo);
         Estacion* buscar(std::string codigo);
 
         int getCantidad();
