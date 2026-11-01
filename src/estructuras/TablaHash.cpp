@@ -42,6 +42,21 @@ TablaHash::~TablaHash() {
 
 }
 
+int TablaHash::funcionHash(std::string codigo) {
+
+    // se llama pos para hacer referencia a su posicion en el array de baldes
+    int pos = 0;
+
+    for ( unsigned char letra : codigo) {
+
+        pos = ( pos * 31 + letra ) % this->tamanio ;
+
+    }
+
+    return pos;
+
+}
+
 int TablaHash::getCantidad() {
 
     return this->cantidad;
@@ -57,21 +72,6 @@ int TablaHash::getColisiones() {
 double TablaHash::factorDeCarga() {
 
     return (double)this->cantidad / this->tamanio;
-
-}
-
-int TablaHash::funcionHash(std::string codigo) {
-
-    // se llama pos para hacer referencia a su posicion en el array de baldes
-    int pos = 0;
-
-    for ( unsigned char letra : codigo) {
-
-        pos = ( pos * 31 + letra ) % this->tamanio ;
-
-    }
-
-    return pos;
 
 }
 
@@ -171,6 +171,26 @@ void TablaHash::mostrarBaldes() {
         }
         
         
+    }
+
+}
+
+void TablaHash::copiarEstaciones(Estacion** arrayEstaciones) {
+
+    int ingresados = 0;
+
+    for (int i=0; i<this->tamanio; i++) {
+
+        NodoHash* nodo = this->baldes[i];
+
+        while (nodo != nullptr)
+        {
+            arrayEstaciones[ingresados] = nodo->estacion;
+            ingresados++;
+            
+            nodo = nodo->siguiente;
+        }
+
     }
 
 }

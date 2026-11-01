@@ -33,6 +33,7 @@ class TablaHash {
         int getColisiones();
         double factorDeCarga();
         void mostrarBaldes();
+        void copiarEstaciones(Estacion** arrayEstaciones);
 
 };
 
