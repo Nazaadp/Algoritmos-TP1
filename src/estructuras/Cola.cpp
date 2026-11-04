@@ -12,14 +12,10 @@ Cola::Cola() {
 
 Cola::~Cola() {
 
-    if (!this->estaVacia())
+    while (!this->estaVacia())
     {
-        while (this->frente != nullptr)
-        {
-            this->desencolar();
-        }
+        this->desencolar();
     }
-    
 
 }
 

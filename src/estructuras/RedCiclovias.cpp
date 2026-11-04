@@ -5,14 +5,18 @@ using namespace std;
 
 RedCiclovias::RedCiclovias(){
 
-    this->activos = new[];
-    this->adyacencia = new[];
-    this->codigos = new[];
-
     this->cantidad = 0;
     this->capacidad = 10;
 
+    this->codigos = new string[this->capacidad];
+    this->activos = new bool[this->capacidad];
+    this->adyacencia = new NodoAdyacencia*[this->capacidad];
+
 };
+
+RedCiclovias::~RedCiclovias() {
+    // FALTA HACER
+}
 
 void RedCiclovias::agrandar() {
 
@@ -20,7 +24,7 @@ void RedCiclovias::agrandar() {
 
     string* codigosNew = new string[capacidadNew];
     bool* activosNew = new bool[capacidadNew];
-    NodoAdyacencia** adyacenciaNew = new NodoAdyacencia[capacidadNew];
+    NodoAdyacencia** adyacenciaNew = new NodoAdyacencia*[capacidadNew];
 
     for (int i = 0; i < this->cantidad; i++)
     {
