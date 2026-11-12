@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include "entidades/Viaje.h"
+#include "../entidades/Viaje.h"
 using namespace std;
 
 struct NodoViaje {
