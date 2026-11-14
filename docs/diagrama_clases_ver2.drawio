@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram id="clases" name="Diagrama de clases">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2150" pageHeight="1830" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2150" pageHeight="1900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -77,7 +77,7 @@
           <mxGeometry height="20" width="63.21" x="82" y="302" as="geometry" />
         </mxCell>
         <mxCell id="Sistema" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="Sistema" vertex="1">
-          <mxGeometry height="664" width="370" x="975" y="110" as="geometry" />
+          <mxGeometry height="734" width="370" x="975" y="110" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-a0" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- estaciones: TablaHash" vertex="1">
           <mxGeometry height="20" width="370" y="26" as="geometry" />
@@ -139,43 +139,49 @@
         <mxCell id="Sistema-m13" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ devolverBici(codigo: string): void" vertex="1">
           <mxGeometry height="20" width="370" y="424" as="geometry" />
         </mxCell>
-        <mxCell id="Sistema-m14" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ enviarAlTaller(idBici: int, prioridad: int): void" vertex="1">
+        <mxCell id="Sistema-m14" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ enviarAlTaller(idBici: int): void" vertex="1">
           <mxGeometry height="20" width="370" y="444" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m15" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ repararMasUrgente(): void" vertex="1">
           <mxGeometry height="20" width="370" y="464" as="geometry" />
         </mxCell>
+        <mxCell id="Sistema-m25" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ agregarBici(id: int, codigoEstacion: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;tipo: string, estado: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;kilometros: int): void" vertex="1">
+          <mxGeometry height="50" width="370" y="484" as="geometry" />
+        </mxCell>
         <mxCell id="Sistema-m16" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ mostrarBici(id: int): void" vertex="1">
-          <mxGeometry height="20" width="370" y="484" as="geometry" />
+          <mxGeometry height="20" width="370" y="534" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m17" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ listarBicis(): void" vertex="1">
-          <mxGeometry height="20" width="370" y="504" as="geometry" />
+          <mxGeometry height="20" width="370" y="554" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m18" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ mostrarCantidadAveriadas(): void" vertex="1">
-          <mxGeometry height="20" width="370" y="524" as="geometry" />
+          <mxGeometry height="20" width="370" y="574" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m19" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ mostrarAltura(): void" vertex="1">
-          <mxGeometry height="20" width="370" y="544" as="geometry" />
+          <mxGeometry height="20" width="370" y="594" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m20" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ eliminarBici(id: int): void {opcional}" vertex="1">
-          <mxGeometry height="20" width="370" y="564" as="geometry" />
+          <mxGeometry height="20" width="370" y="614" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m21" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- cargarEstaciones(ruta: string): void" vertex="1">
-          <mxGeometry height="20" width="370" y="584" as="geometry" />
+          <mxGeometry height="20" width="370" y="634" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m22" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- cargarBicicletas(ruta: string): void" vertex="1">
-          <mxGeometry height="20" width="370" y="604" as="geometry" />
+          <mxGeometry height="20" width="370" y="654" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m23" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- cargarViajes(ruta: string): void" vertex="1">
-          <mxGeometry height="20" width="370" y="624" as="geometry" />
+          <mxGeometry height="20" width="370" y="674" as="geometry" />
         </mxCell>
         <mxCell id="Sistema-m24" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- cargarCiclovias(ruta: string): void" vertex="1">
-          <mxGeometry height="20" width="370" y="644" as="geometry" />
+          <mxGeometry height="20" width="370" y="694" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m26" parent="Sistema" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- valorParaOrdenar(estacion: Estacion*, porCapacidad: bool): int" vertex="1">
+          <mxGeometry height="20" width="370" y="714" as="geometry" />
         </mxCell>
         <mxCell id="TablaHash" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="TablaHash" vertex="1">
-          <mxGeometry height="334" width="300" x="590" y="864" as="geometry" />
+          <mxGeometry height="334" width="300" x="590" y="934" as="geometry" />
         </mxCell>
-        <mxCell id="TablaHash-a0" parent="TablaHash" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- baldes: NodoHash**" vertex="1">
+        <mxCell id="TablaHash-a0" parent="TablaHash" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- baldes: Nodo&amp;lt;Estacion*&amp;gt;**" vertex="1">
           <mxGeometry height="20" width="300" y="26" as="geometry" />
         </mxCell>
         <mxCell id="TablaHash-a1" parent="TablaHash" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- tamanio: int" vertex="1">
@@ -223,17 +229,20 @@
         <mxCell id="TablaHash-m10" parent="TablaHash" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- funcionHash(codigo: string): int" vertex="1">
           <mxGeometry height="20" width="300" y="314" as="geometry" />
         </mxCell>
-        <mxCell id="NodoHash" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;NodoHash" vertex="1">
-          <mxGeometry height="80" width="180" x="650" y="1268" as="geometry" />
+        <mxCell id="Nodo" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;Nodo" vertex="1">
+          <mxGeometry height="80" width="180" x="455" y="1338" as="geometry" />
         </mxCell>
-        <mxCell id="NodoHash-a0" parent="NodoHash" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ estacion: Estacion*" vertex="1">
+        <mxCell id="Nodo-a0" parent="Nodo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ dato: T" vertex="1">
           <mxGeometry height="20" width="180" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="NodoHash-a1" parent="NodoHash" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ siguiente: NodoHash*" vertex="1">
+        <mxCell id="Nodo-a1" parent="Nodo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ siguiente: Nodo&amp;lt;T&amp;gt;*" vertex="1">
           <mxGeometry height="20" width="180" y="60" as="geometry" />
         </mxCell>
+        <mxCell id="Nodo-T" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;fontFamily=Helvetica;align=center;verticalAlign=middle;" value="T" vertex="1">
+          <mxGeometry height="20" width="26" x="621" y="1326" as="geometry" />
+        </mxCell>
         <mxCell id="Estacion" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="Estacion" vertex="1">
-          <mxGeometry height="344" width="270" x="605" y="1438" as="geometry" />
+          <mxGeometry height="344" width="270" x="605" y="1508" as="geometry" />
         </mxCell>
         <mxCell id="Estacion-a0" parent="Estacion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- codigo: string" vertex="1">
           <mxGeometry height="20" width="270" y="26" as="geometry" />
@@ -281,12 +290,12 @@
           <mxGeometry height="20" width="270" y="324" as="geometry" />
         </mxCell>
         <mxCell id="Cola" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="Cola" vertex="1">
-          <mxGeometry height="174" width="180" x="215" y="1438" as="geometry" />
+          <mxGeometry height="174" width="180" x="215" y="1508" as="geometry" />
         </mxCell>
-        <mxCell id="Cola-a0" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- frente: NodoCola&amp;lt;T&amp;gt;*" vertex="1">
+        <mxCell id="Cola-a0" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- frente: Nodo&amp;lt;int&amp;gt;*" vertex="1">
           <mxGeometry height="20" width="180" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="Cola-a1" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- fin: NodoCola&amp;lt;T&amp;gt;*" vertex="1">
+        <mxCell id="Cola-a1" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- fin: Nodo&amp;lt;int&amp;gt;*" vertex="1">
           <mxGeometry height="20" width="180" y="46" as="geometry" />
         </mxCell>
         <mxCell id="Cola-sep" parent="Cola" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
@@ -298,31 +307,22 @@
         <mxCell id="Cola-m1" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ ~Cola()" vertex="1">
           <mxGeometry height="20" width="180" y="94" as="geometry" />
         </mxCell>
-        <mxCell id="Cola-m2" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ encolar(valor: T): void" vertex="1">
+        <mxCell id="Cola-m2" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ encolar(valor: int): void" vertex="1">
           <mxGeometry height="20" width="180" y="114" as="geometry" />
         </mxCell>
-        <mxCell id="Cola-m3" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ desencolar(): T" vertex="1">
+        <mxCell id="Cola-m3" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ desencolar(): int" vertex="1">
           <mxGeometry height="20" width="180" y="134" as="geometry" />
         </mxCell>
         <mxCell id="Cola-m4" parent="Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ estaVacia(): bool" vertex="1">
           <mxGeometry height="20" width="180" y="154" as="geometry" />
         </mxCell>
-        <mxCell id="NodoCola" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;NodoCola" vertex="1">
-          <mxGeometry height="80" width="170" x="220" y="1672" as="geometry" />
-        </mxCell>
-        <mxCell id="NodoCola-a0" parent="NodoCola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ valor: T" vertex="1">
-          <mxGeometry height="20" width="170" y="40" as="geometry" />
-        </mxCell>
-        <mxCell id="NodoCola-a1" parent="NodoCola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ siguiente: NodoCola&amp;lt;T&amp;gt;*" vertex="1">
-          <mxGeometry height="20" width="170" y="60" as="geometry" />
-        </mxCell>
         <mxCell id="ListaViajes" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="ListaViajes" vertex="1">
-          <mxGeometry height="174" width="360" x="980" y="864" as="geometry" />
+          <mxGeometry height="174" width="360" x="980" y="934" as="geometry" />
         </mxCell>
-        <mxCell id="ListaViajes-a0" parent="ListaViajes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- primero: NodoViaje*" vertex="1">
+        <mxCell id="ListaViajes-a0" parent="ListaViajes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- primero: Nodo&amp;lt;Viaje*&amp;gt;*" vertex="1">
           <mxGeometry height="20" width="360" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="ListaViajes-a1" parent="ListaViajes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- ultimo: NodoViaje*" vertex="1">
+        <mxCell id="ListaViajes-a1" parent="ListaViajes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- ultimo: Nodo&amp;lt;Viaje*&amp;gt;*" vertex="1">
           <mxGeometry height="20" width="360" y="46" as="geometry" />
         </mxCell>
         <mxCell id="ListaViajes-sep" parent="ListaViajes" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
@@ -343,17 +343,8 @@
         <mxCell id="ListaViajes-m4" parent="ListaViajes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ mostrarViajesDeUsuario(dni: int): int" vertex="1">
           <mxGeometry height="20" width="360" y="154" as="geometry" />
         </mxCell>
-        <mxCell id="NodoViaje" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;NodoViaje" vertex="1">
-          <mxGeometry height="80" width="180" x="1070" y="1268" as="geometry" />
-        </mxCell>
-        <mxCell id="NodoViaje-a0" parent="NodoViaje" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ viaje: Viaje*" vertex="1">
-          <mxGeometry height="20" width="180" y="40" as="geometry" />
-        </mxCell>
-        <mxCell id="NodoViaje-a1" parent="NodoViaje" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ siguiente: NodoViaje*" vertex="1">
-          <mxGeometry height="20" width="180" y="60" as="geometry" />
-        </mxCell>
         <mxCell id="Viaje" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="Viaje" vertex="1">
-          <mxGeometry height="324" width="300" x="1010" y="1438" as="geometry" />
+          <mxGeometry height="324" width="300" x="1010" y="1508" as="geometry" />
         </mxCell>
         <mxCell id="Viaje-a0" parent="Viaje" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- id: int" vertex="1">
           <mxGeometry height="20" width="300" y="26" as="geometry" />
@@ -398,9 +389,9 @@
           <mxGeometry height="20" width="300" y="304" as="geometry" />
         </mxCell>
         <mxCell id="ArbolBicicletas" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="ArbolBicicletas" vertex="1">
-          <mxGeometry height="254" width="250" x="1450" y="864" as="geometry" />
+          <mxGeometry height="289" width="250" x="1450" y="934" as="geometry" />
         </mxCell>
-        <mxCell id="ArbolBicicletas-a0" parent="ArbolBicicletas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- raiz: NodoArbol&amp;lt;Bicicleta*&amp;gt;*" vertex="1">
+        <mxCell id="ArbolBicicletas-a0" parent="ArbolBicicletas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- raiz: NodoArbol*" vertex="1">
           <mxGeometry height="20" width="250" y="26" as="geometry" />
         </mxCell>
         <mxCell id="ArbolBicicletas-sep" parent="ArbolBicicletas" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
@@ -433,23 +424,26 @@
         <mxCell id="ArbolBicicletas-m8" parent="ArbolBicicletas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ eliminar(id: int): bool {opcional}" vertex="1">
           <mxGeometry height="20" width="250" y="214" as="geometry" />
         </mxCell>
-        <mxCell id="ArbolBicicletas-m9" parent="ArbolBicicletas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- liberar(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*): void" vertex="1">
+        <mxCell id="ArbolBicicletas-m9" parent="ArbolBicicletas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- liberar(nodo: NodoArbol*): void" vertex="1">
           <mxGeometry height="20" width="250" y="234" as="geometry" />
         </mxCell>
-        <mxCell id="NodoArbol" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;NodoArbol" vertex="1">
-          <mxGeometry height="100" width="180" x="1485" y="1268" as="geometry" />
+        <mxCell id="ArbolBicicletas-m10" parent="ArbolBicicletas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- mostrarInorder(nodo: NodoArbol*,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;kmMinimo: int): void" vertex="1">
+          <mxGeometry height="35" width="250" y="254" as="geometry" />
         </mxCell>
-        <mxCell id="NodoArbol-a0" parent="NodoArbol" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ dato: T" vertex="1">
+        <mxCell id="NodoArbol" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;NodoArbol" vertex="1">
+          <mxGeometry height="100" width="180" x="1485" y="1338" as="geometry" />
+        </mxCell>
+        <mxCell id="NodoArbol-a0" parent="NodoArbol" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ bici: Bicicleta*" vertex="1">
           <mxGeometry height="20" width="180" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="NodoArbol-a1" parent="NodoArbol" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ izquierdo: NodoArbol&amp;lt;T&amp;gt;*" vertex="1">
+        <mxCell id="NodoArbol-a1" parent="NodoArbol" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ izquierdo: NodoArbol*" vertex="1">
           <mxGeometry height="20" width="180" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="NodoArbol-a2" parent="NodoArbol" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ derecho: NodoArbol&amp;lt;T&amp;gt;*" vertex="1">
+        <mxCell id="NodoArbol-a2" parent="NodoArbol" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ derecho: NodoArbol*" vertex="1">
           <mxGeometry height="20" width="180" y="80" as="geometry" />
         </mxCell>
         <mxCell id="Bicicleta" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="Bicicleta" vertex="1">
-          <mxGeometry height="284" width="270" x="1440" y="1438" as="geometry" />
+          <mxGeometry height="304" width="270" x="1440" y="1508" as="geometry" />
         </mxCell>
         <mxCell id="Bicicleta-a0" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- id: int" vertex="1">
           <mxGeometry height="20" width="270" y="26" as="geometry" />
@@ -457,10 +451,10 @@
         <mxCell id="Bicicleta-a1" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- codigoEstacion: string" vertex="1">
           <mxGeometry height="20" width="270" y="46" as="geometry" />
         </mxCell>
-        <mxCell id="Bicicleta-a2" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- tipo: string" vertex="1">
+        <mxCell id="Bicicleta-a2" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- electrica: bool" vertex="1">
           <mxGeometry height="20" width="270" y="66" as="geometry" />
         </mxCell>
-        <mxCell id="Bicicleta-a3" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- estado: string" vertex="1">
+        <mxCell id="Bicicleta-a3" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- averiada: bool" vertex="1">
           <mxGeometry height="20" width="270" y="86" as="geometry" />
         </mxCell>
         <mxCell id="Bicicleta-a4" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- kilometros: int" vertex="1">
@@ -469,7 +463,7 @@
         <mxCell id="Bicicleta-sep" parent="Bicicleta" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
           <mxGeometry height="8" width="270" y="126" as="geometry" />
         </mxCell>
-        <mxCell id="Bicicleta-m0" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ Bicicleta(id: int, codigoEstacion: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;tipo: string, estado: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;kilometros: int)" vertex="1">
+        <mxCell id="Bicicleta-m0" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ Bicicleta(id: int, codigoEstacion: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;electrica: bool, averiada: bool,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;kilometros: int)" vertex="1">
           <mxGeometry height="50" width="270" y="134" as="geometry" />
         </mxCell>
         <mxCell id="Bicicleta-m1" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ getId(): int" vertex="1">
@@ -484,11 +478,14 @@
         <mxCell id="Bicicleta-m4" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ estaAveriada(): bool" vertex="1">
           <mxGeometry height="20" width="270" y="244" as="geometry" />
         </mxCell>
-        <mxCell id="Bicicleta-m5" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ mostrar(): void" vertex="1">
+        <mxCell id="Bicicleta-m6" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ getPrioridad(): int" vertex="1">
           <mxGeometry height="20" width="270" y="264" as="geometry" />
         </mxCell>
+        <mxCell id="Bicicleta-m5" parent="Bicicleta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ mostrar(): void" vertex="1">
+          <mxGeometry height="20" width="270" y="284" as="geometry" />
+        </mxCell>
         <mxCell id="RedCiclovias" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="RedCiclovias" vertex="1">
-          <mxGeometry height="294" width="390" x="110" y="864" as="geometry" />
+          <mxGeometry height="314" width="390" x="110" y="934" as="geometry" />
         </mxCell>
         <mxCell id="RedCiclovias-a0" parent="RedCiclovias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- codigos: string*" vertex="1">
           <mxGeometry height="20" width="390" y="26" as="geometry" />
@@ -496,7 +493,7 @@
         <mxCell id="RedCiclovias-a1" parent="RedCiclovias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- activos: bool*" vertex="1">
           <mxGeometry height="20" width="390" y="46" as="geometry" />
         </mxCell>
-        <mxCell id="RedCiclovias-a2" parent="RedCiclovias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- adyacencia: NodoAdyacencia&amp;lt;int&amp;gt;**" vertex="1">
+        <mxCell id="RedCiclovias-a2" parent="RedCiclovias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- adyacencia: Nodo&amp;lt;int&amp;gt;**" vertex="1">
           <mxGeometry height="20" width="390" y="66" as="geometry" />
         </mxCell>
         <mxCell id="RedCiclovias-a3" parent="RedCiclovias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- cantidad: int" vertex="1">
@@ -532,19 +529,13 @@
         <mxCell id="RedCiclovias-m7" parent="RedCiclovias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- agrandar(): void" vertex="1">
           <mxGeometry height="20" width="390" y="274" as="geometry" />
         </mxCell>
-        <mxCell id="NodoAdyacencia" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;NodoAdyacencia" vertex="1">
-          <mxGeometry height="80" width="210" x="200" y="1268" as="geometry" />
-        </mxCell>
-        <mxCell id="NodoAdyacencia-a0" parent="NodoAdyacencia" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ vecino: T" vertex="1">
-          <mxGeometry height="20" width="210" y="40" as="geometry" />
-        </mxCell>
-        <mxCell id="NodoAdyacencia-a1" parent="NodoAdyacencia" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ siguiente: NodoAdyacencia&amp;lt;T&amp;gt;*" vertex="1">
-          <mxGeometry height="20" width="210" y="60" as="geometry" />
+        <mxCell id="RedCiclovias-m8" parent="RedCiclovias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- agregarVecino(vertice: int, vecino: int): void" vertex="1">
+          <mxGeometry height="20" width="390" y="294" as="geometry" />
         </mxCell>
         <mxCell id="HeapTaller" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="HeapTaller" vertex="1">
-          <mxGeometry height="254" width="290" x="1790" y="864" as="geometry" />
+          <mxGeometry height="254" width="290" x="1790" y="934" as="geometry" />
         </mxCell>
-        <mxCell id="HeapTaller-a0" parent="HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- datos: EntradaTaller*" vertex="1">
+        <mxCell id="HeapTaller-a0" parent="HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- bicis: Bicicleta**" vertex="1">
           <mxGeometry height="20" width="290" y="26" as="geometry" />
         </mxCell>
         <mxCell id="HeapTaller-a1" parent="HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- cantidad: int" vertex="1">
@@ -562,7 +553,7 @@
         <mxCell id="HeapTaller-m1" parent="HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ ~HeapTaller()" vertex="1">
           <mxGeometry height="20" width="290" y="114" as="geometry" />
         </mxCell>
-        <mxCell id="HeapTaller-m2" parent="HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ insertar(bici: Bicicleta*, prioridad: int): void" vertex="1">
+        <mxCell id="HeapTaller-m2" parent="HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ insertar(bici: Bicicleta*): void" vertex="1">
           <mxGeometry height="20" width="290" y="134" as="geometry" />
         </mxCell>
         <mxCell id="HeapTaller-m3" parent="HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ extraerMasUrgente(): Bicicleta*" vertex="1">
@@ -579,15 +570,6 @@
         </mxCell>
         <mxCell id="HeapTaller-m7" parent="HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- agrandar(): void" vertex="1">
           <mxGeometry height="20" width="290" y="234" as="geometry" />
-        </mxCell>
-        <mxCell id="EntradaTaller" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;EntradaTaller" vertex="1">
-          <mxGeometry height="80" width="140" x="1865" y="1268" as="geometry" />
-        </mxCell>
-        <mxCell id="EntradaTaller-a0" parent="EntradaTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ bici: Bicicleta*" vertex="1">
-          <mxGeometry height="20" width="140" y="40" as="geometry" />
-        </mxCell>
-        <mxCell id="EntradaTaller-a1" parent="EntradaTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="+ prioridad: int" vertex="1">
-          <mxGeometry height="20" width="140" y="60" as="geometry" />
         </mxCell>
         <mxCell id="Redistribucion" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;" value="Redistribucion" vertex="1">
           <mxGeometry height="294" width="340" x="1740" y="110" as="geometry" />
@@ -634,8 +616,8 @@
         <mxCell id="Redistribucion-m5" parent="Redistribucion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;" value="- mostrarSolucion(): void" vertex="1">
           <mxGeometry height="20" width="340" y="274" as="geometry" />
         </mxCell>
-        <mxCell id="nota-taller" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=2;fillColor=#FFFFFF;strokeColor=#999999;fontSize=11;fontColor=#333333;fontFamily=Helvetica;" value="EntradaTaller solo apunta a la bicicleta (asociación): la crea y la destruye ArbolBicicletas." vertex="1">
-          <mxGeometry height="61" width="250" x="1859" y="1511" as="geometry" />
+        <mxCell id="nota-taller" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=2;fillColor=#FFFFFF;strokeColor=#999999;fontSize=11;fontColor=#333333;fontFamily=Helvetica;" value="HeapTaller solo apunta a las bicicletas (asociación): las crea y las destruye ArbolBicicletas." vertex="1">
+          <mxGeometry height="61" width="250" x="1850" y="1310" as="geometry" />
         </mxCell>
         <mxCell id="nota-redis" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=2;fillColor=#FFFFFF;strokeColor=#999999;fontSize=11;fontColor=#333333;fontFamily=Helvetica;" value="No pertenece a Sistema: la crea el menú (main.cpp) cuando el usuario elige la parte D, con la capacidad del camión y los faltantes que ingresa." vertex="1">
           <mxGeometry height="61" width="340" x="1740" y="444" as="geometry" />
@@ -643,8 +625,8 @@
         <mxCell id="comp-sistema-RedCiclovias" edge="1" parent="1" source="Sistema" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="RedCiclovias" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1012" y="799" />
-              <mxPoint x="305" y="799" />
+              <mxPoint x="1012" y="869" />
+              <mxPoint x="305" y="869" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -656,8 +638,8 @@
         <mxCell id="comp-sistema-TablaHash" edge="1" parent="1" source="Sistema" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="TablaHash" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1086" y="824" />
-              <mxPoint x="740" y="824" />
+              <mxPoint x="1086" y="894" />
+              <mxPoint x="740" y="894" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -677,8 +659,8 @@
         <mxCell id="comp-sistema-ArbolBicicletas" edge="1" parent="1" source="Sistema" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.7;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ArbolBicicletas" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1234" y="824" />
-              <mxPoint x="1565" y="824" />
+              <mxPoint x="1234" y="894" />
+              <mxPoint x="1565" y="894" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -690,8 +672,8 @@
         <mxCell id="comp-sistema-HeapTaller" edge="1" parent="1" source="Sistema" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.9;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HeapTaller" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1308" y="799" />
-              <mxPoint x="1935" y="799" />
+              <mxPoint x="1308" y="869" />
+              <mxPoint x="1935" y="869" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -700,28 +682,33 @@
             <mxPoint x="6" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="comp-RedCiclovias-NodoAdyacencia" edge="1" parent="1" source="RedCiclovias" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NodoAdyacencia" value="">
+        <mxCell id="comp-RedCiclovias-Nodo" edge="1" parent="1" source="RedCiclovias" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.9487;exitY=1;exitDx=0;exitDy=0;entryX=0.1389;entryY=0;entryDx=0;entryDy=0;" target="Nodo" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="comp-RedCiclovias-NodoAdyacencia-r0" connectable="0" parent="comp-RedCiclovias-NodoAdyacencia" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
+        <mxCell id="comp-RedCiclovias-Nodo-r0" connectable="0" parent="comp-RedCiclovias-Nodo" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
             <mxPoint x="6" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="comp-TablaHash-NodoHash" edge="1" parent="1" source="TablaHash" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NodoHash" value="">
+        <mxCell id="comp-TablaHash-Nodo" edge="1" parent="1" source="TablaHash" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.0333;exitY=1;exitDx=0;exitDy=0;entryX=0.8056;entryY=0;entryDx=0;entryDy=0;" target="Nodo" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="comp-TablaHash-NodoHash-r0" connectable="0" parent="comp-TablaHash-NodoHash" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
+        <mxCell id="comp-TablaHash-Nodo-r0" connectable="0" parent="comp-TablaHash-Nodo" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
-            <mxPoint x="6" y="-18" as="offset" />
+            <mxPoint x="-28" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="comp-ListaViajes-NodoViaje" edge="1" parent="1" source="ListaViajes" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NodoViaje" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="comp-ListaViajes-Nodo" edge="1" parent="1" source="ListaViajes" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.0556;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="Nodo" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="1460" />
+              <mxPoint x="590" y="1460" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="comp-ListaViajes-NodoViaje-r0" connectable="0" parent="comp-ListaViajes-NodoViaje" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
+        <mxCell id="comp-ListaViajes-Nodo-r0" connectable="0" parent="comp-ListaViajes-Nodo" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
-            <mxPoint x="6" y="-18" as="offset" />
+            <mxPoint x="6" y="4" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="comp-ArbolBicicletas-NodoArbol" edge="1" parent="1" source="ArbolBicicletas" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NodoArbol" value="">
@@ -732,26 +719,18 @@
             <mxPoint x="6" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="comp-HeapTaller-EntradaTaller" edge="1" parent="1" source="HeapTaller" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EntradaTaller" value="">
+        <mxCell id="comp-TablaHash-Estacion" edge="1" parent="1" source="TablaHash" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Estacion" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="comp-HeapTaller-EntradaTaller-r0" connectable="0" parent="comp-HeapTaller-EntradaTaller" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
+        <mxCell id="comp-TablaHash-Estacion-r0" connectable="0" parent="comp-TablaHash-Estacion" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
             <mxPoint x="6" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="comp-NodoHash-Estacion" edge="1" parent="1" source="NodoHash" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Estacion" value="">
+        <mxCell id="comp-ListaViajes-Viaje" edge="1" parent="1" source="ListaViajes" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Viaje" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="comp-NodoHash-Estacion-r0" connectable="0" parent="comp-NodoHash-Estacion" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="1" vertex="1">
-          <mxGeometry relative="1" x="1" as="geometry">
-            <mxPoint x="6" y="-18" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="comp-NodoViaje-Viaje" edge="1" parent="1" source="NodoViaje" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Viaje" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="comp-NodoViaje-Viaje-r0" connectable="0" parent="comp-NodoViaje-Viaje" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="1" vertex="1">
+        <mxCell id="comp-ListaViajes-Viaje-r0" connectable="0" parent="comp-ListaViajes-Viaje" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
             <mxPoint x="6" y="-18" as="offset" />
           </mxGeometry>
@@ -764,12 +743,16 @@
             <mxPoint x="6" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="comp-Cola-NodoCola" edge="1" parent="1" source="Cola" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NodoCola" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="comp-Cola-Nodo" edge="1" parent="1" source="Cola" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.8889;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Nodo" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="375" y="1378" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="comp-Cola-NodoCola-r0" connectable="0" parent="comp-Cola-NodoCola" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
+        <mxCell id="comp-Cola-Nodo-r0" connectable="0" parent="comp-Cola-Nodo" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
-            <mxPoint x="6" y="-18" as="offset" />
+            <mxPoint x="-30" y="-20" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="comp-Estacion-Cola" edge="1" parent="1" source="Estacion" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0;exitY=0.2529;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Cola" value="">
@@ -780,64 +763,37 @@
             <mxPoint x="6" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="asoc-EntradaTaller-Bicicleta" edge="1" parent="1" source="EntradaTaller" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.0458;entryDx=0;entryDy=0;" target="Bicicleta" value="">
+        <mxCell id="asoc-HeapTaller-Bicicleta" edge="1" parent="1" source="HeapTaller" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=0.1034;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.0428;entryDx=0;entryDy=0;" target="Bicicleta" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1935" y="1451" />
+              <mxPoint x="1820" y="1521" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="asoc-EntradaTaller-Bicicleta-r0" connectable="0" parent="asoc-EntradaTaller-Bicicleta" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..1" vertex="1">
+        <mxCell id="asoc-HeapTaller-Bicicleta-r0" connectable="0" parent="asoc-HeapTaller-Bicicleta" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..1" vertex="1">
           <mxGeometry relative="1" x="-1" as="geometry">
             <mxPoint x="6" y="4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="asoc-EntradaTaller-Bicicleta-r1" connectable="0" parent="asoc-EntradaTaller-Bicicleta" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="1" vertex="1">
+        <mxCell id="asoc-HeapTaller-Bicicleta-r1" connectable="0" parent="asoc-HeapTaller-Bicicleta" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;" value="0..*" vertex="1">
           <mxGeometry relative="1" x="1" as="geometry">
             <mxPoint x="6" y="-18" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dep-RedCiclovias-Cola" edge="1" parent="1" source="RedCiclovias" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;dashed=1;exitX=0;exitY=0.8299;exitDx=0;exitDy=0;entryX=0;entryY=0.0747;entryDx=0;entryDy=0;" target="Cola" value="«usa»">
+        <mxCell id="dep-RedCiclovias-Cola" edge="1" parent="1" source="RedCiclovias" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;dashed=1;exitX=0;exitY=0.7771;exitDx=0;exitDy=0;entryX=0;entryY=0.0747;entryDx=0;entryDy=0;" target="Cola" value="«usa»">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="70" y="1108" />
-              <mxPoint x="70" y="1451" />
+              <mxPoint x="70" y="1178" />
+              <mxPoint x="70" y="1521" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="lazo-NodoHash-siguiente" edge="1" parent="1" source="NodoHash" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.875;entryDx=0;entryDy=0;" target="NodoHash" value="siguiente&lt;br&gt;0..1">
+        <mxCell id="lazo-Nodo-siguiente" edge="1" parent="1" source="Nodo" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.875;entryDx=0;entryDy=0;" target="Nodo" value="siguiente&lt;br&gt;0..1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="36" as="offset" />
             <Array as="points">
-              <mxPoint x="856" y="1288" />
-              <mxPoint x="856" y="1338" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="lazo-NodoCola-siguiente" edge="1" parent="1" source="NodoCola" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.875;entryDx=0;entryDy=0;" target="NodoCola" value="siguiente&lt;br&gt;0..1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="36" as="offset" />
-            <Array as="points">
-              <mxPoint x="416" y="1692" />
-              <mxPoint x="416" y="1742" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="lazo-NodoViaje-siguiente" edge="1" parent="1" source="NodoViaje" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.875;entryDx=0;entryDy=0;" target="NodoViaje" value="siguiente&lt;br&gt;0..1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="36" as="offset" />
-            <Array as="points">
-              <mxPoint x="1276" y="1288" />
-              <mxPoint x="1276" y="1338" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="lazo-NodoAdyacencia-siguiente" edge="1" parent="1" source="NodoAdyacencia" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.875;entryDx=0;entryDy=0;" target="NodoAdyacencia" value="siguiente&lt;br&gt;0..1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="36" as="offset" />
-            <Array as="points">
-              <mxPoint x="436" y="1288" />
-              <mxPoint x="436" y="1338" />
+              <mxPoint x="661" y="1358" />
+              <mxPoint x="661" y="1408" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -845,8 +801,8 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="36" as="offset" />
             <Array as="points">
-              <mxPoint x="1691" y="1288" />
               <mxPoint x="1691" y="1358" />
+              <mxPoint x="1691" y="1428" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -854,12 +810,12 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-36" as="offset" />
             <Array as="points">
-              <mxPoint x="1459" y="1288" />
-              <mxPoint x="1459" y="1338" />
+              <mxPoint x="1459" y="1358" />
+              <mxPoint x="1459" y="1408" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nota-taller-linea" edge="1" parent="1" source="nota-taller" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=none;dashed=1;strokeColor=#999999;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.85;entryY=1;entryDx=0;entryDy=0;" target="EntradaTaller" value="">
+        <mxCell id="nota-taller-linea" edge="1" parent="1" source="nota-taller" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=none;dashed=1;strokeColor=#999999;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.6379;entryY=1;entryDx=0;entryDy=0;" target="HeapTaller" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="nota-redis-linea" edge="1" parent="1" source="nota-redis" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=none;dashed=1;strokeColor=#999999;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Redistribucion" value="">
