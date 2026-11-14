@@ -1,24 +1,19 @@
 #ifndef COLA_H
 #define COLA_H
 
-struct NodoCola
-{
-    int valor;
-    NodoCola* siguiente;
-};
-
+#include "estructuras/Nodo.h"
 
 class Cola
 {
     private:
-        NodoCola* frente;
-        NodoCola* fin;
+        Nodo<int>* frente;
+        Nodo<int>* fin;
 
     public:
         Cola();
         ~Cola();
 
-        void encolar(int Valor);
+        void encolar(int valor);
         int desencolar();
         bool estaVacia();
 };

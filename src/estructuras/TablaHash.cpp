@@ -9,7 +9,7 @@ TablaHash::TablaHash(int tamanio) {
     this->cantidad = 0;
     this->colisiones = 0;
 
-    this->baldes = new NodoHash*[tamanio];
+    this->baldes = new Nodo<Estacion*>*[tamanio];
 
     for (int i=0; i<tamanio; i++) {
 
@@ -23,14 +23,14 @@ TablaHash::~TablaHash() {
 
     for(int i=0; i<this->tamanio; i++) {
 
-        NodoHash* nodo = this->baldes[i];
+        Nodo<Estacion*>* nodo = this->baldes[i];
 
         while (nodo != nullptr)
         {
             
-            NodoHash* nodoTemp = nodo->siguiente;
+            Nodo<Estacion*>* nodoTemp = nodo->siguiente;
 
-            delete nodo->estacion;
+            delete nodo->dato;
             delete nodo;
 
             nodo = nodoTemp;
@@ -42,7 +42,7 @@ TablaHash::~TablaHash() {
 
 }
 
-int TablaHash::funcionHash(std::string codigo) {
+int TablaHash::funcionHash(string codigo) {
 
     // se llama pos para hacer referencia a su posicion en el array de baldes
     int pos = 0;
@@ -75,14 +75,14 @@ double TablaHash::factorDeCarga() {
 
 }
 
-Estacion* TablaHash::buscar(std::string codigo) {
+Estacion* TablaHash::buscar(string codigo) {
 
-    NodoHash* nodo = this->baldes[funcionHash(codigo)];
+    Nodo<Estacion*>* nodo = this->baldes[funcionHash(codigo)];
 
     while (nodo != nullptr)
     {
-        if( nodo->estacion->getCodigo() == codigo ) {
-            return nodo->estacion;
+        if( nodo->dato->getCodigo() == codigo ) {
+            return nodo->dato;
         } else {
             nodo = nodo->siguiente;
         }
@@ -102,10 +102,10 @@ bool TablaHash::insertar(Estacion* estacion) {
             colisiones += 1;
         }
 
-        NodoHash* newNodo = new NodoHash;
+        Nodo<Estacion*>* newNodo = new Nodo<Estacion*>;
 
         newNodo->siguiente = this->baldes[pos];
-        newNodo->estacion = estacion;
+        newNodo->dato = estacion;
 
         this->baldes[pos] = newNodo;
         this->cantidad++;
@@ -118,15 +118,15 @@ bool TablaHash::insertar(Estacion* estacion) {
 
 };
 
-bool TablaHash::eliminar(std::string codigo) {
+bool TablaHash::eliminar(string codigo) {
 
     int pos = funcionHash(codigo);
-    NodoHash* nodo = this->baldes[pos];
-    NodoHash* nodoAnterior = nullptr;
+    Nodo<Estacion*>* nodo = this->baldes[pos];
+    Nodo<Estacion*>* nodoAnterior = nullptr;
 
     while (nodo != nullptr)
     {
-        if (nodo->estacion->getCodigo() == codigo)
+        if (nodo->dato->getCodigo() == codigo)
         {
             if(nodoAnterior == nullptr) {
                 this->baldes[pos] = nodo->siguiente;
@@ -134,7 +134,7 @@ bool TablaHash::eliminar(std::string codigo) {
                 nodoAnterior->siguiente = nodo->siguiente;
             }
             
-            delete nodo->estacion;
+            delete nodo->dato;
             delete nodo;
             this->cantidad--;
             return true;
@@ -152,7 +152,7 @@ void TablaHash::mostrarBaldes() {
 
     for(int i=0; i<this->tamanio; i++) {
 
-        NodoHash* nodo = this->baldes[i];
+        Nodo<Estacion*>* nodo = this->baldes[i];
 
         if (nodo != nullptr)
         {
@@ -161,7 +161,7 @@ void TablaHash::mostrarBaldes() {
             while (nodo != nullptr)
             {
 
-                cout << " -> " << nodo->estacion->getCodigo();
+                cout << " -> " << nodo->dato->getCodigo();
 
                 nodo = nodo->siguiente;
                 
@@ -181,11 +181,11 @@ void TablaHash::copiarEstaciones(Estacion** arrayEstaciones) {
 
     for (int i=0; i<this->tamanio; i++) {
 
-        NodoHash* nodo = this->baldes[i];
+        Nodo<Estacion*>* nodo = this->baldes[i];
 
         while (nodo != nullptr)
         {
-            arrayEstaciones[ingresados] = nodo->estacion;
+            arrayEstaciones[ingresados] = nodo->dato;
             ingresados++;
             
             nodo = nodo->siguiente;

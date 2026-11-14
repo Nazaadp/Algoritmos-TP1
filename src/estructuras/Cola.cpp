@@ -21,9 +21,9 @@ Cola::~Cola() {
 
 void Cola::encolar(int valor) {
 
-    NodoCola* newNodo = new NodoCola;
+    Nodo<int>* newNodo = new Nodo<int>;
 
-    newNodo->valor = valor;
+    newNodo->dato = valor;
     newNodo->siguiente = nullptr;
 
     if (this->estaVacia()) {
@@ -48,9 +48,9 @@ bool Cola::estaVacia() {
 
 int Cola::desencolar() {
 
-    NodoCola* nodoAux = this->frente;
+    Nodo<int>* nodoAux = this->frente;
 
-    int valor = this->frente->valor;
+    int valor = this->frente->dato;
 
     this->frente = this->frente->siguiente;
 

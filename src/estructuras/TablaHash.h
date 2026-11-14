@@ -3,31 +3,26 @@
 
 #include <string>
 #include "entidades/Estacion.h"
+#include "estructuras/Nodo.h"
+using namespace std;
 
-struct NodoHash {
-
-    Estacion* estacion;
-    NodoHash* siguiente;
-};
-
-
-class TablaHash {
-
+class TablaHash
+{
     private:
         int tamanio;
         int cantidad;
         int colisiones;
-        NodoHash** baldes;
+        Nodo<Estacion*>** baldes;
 
-        int funcionHash(std::string codigo);
+        int funcionHash(string codigo);
 
     public:
         TablaHash(int tamanio);
         ~TablaHash();
 
         bool insertar(Estacion* estacion);
-        bool eliminar(std::string codigo);
-        Estacion* buscar(std::string codigo);
+        bool eliminar(string codigo);
+        Estacion* buscar(string codigo);
 
         int getCantidad();
         int getColisiones();
