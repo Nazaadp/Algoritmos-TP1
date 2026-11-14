@@ -7,26 +7,27 @@
 // #include "estructuras/ListaViajes.h"
 // #include "estructuras/RedCiclovias.h"
 // #include "estructuras/HeapTaller.h"
+using namespace std;
 
-class Sistema {
-
+class Sistema
+{
     private:
         TablaHash estaciones;
 
-        void cargarEstaciones(std::string ruta);
+        void cargarEstaciones(string ruta);
         int valorParaOrdenar(Estacion* estacion, bool porCapacidad);
 
     public:
         Sistema();
 
         // Carga de Datos
-        void cargarDatos(std::string carpeta);
+        void cargarDatos(string carpeta);
 
         // Estaciones
-        void mostrarEstacion(std::string codigo);
-        void agregarEstacion(std::string codigo, std::string nombre, std::string barrio, 
+        void mostrarEstacion(string codigo);
+        void agregarEstacion(string codigo, string nombre, string barrio, 
                                 int capacidad, int bicisDisponibles);
-        void eliminarEstacion(std::string codigo);
+        void eliminarEstacion(string codigo);
         void listarEstacionesOrdenadas(bool porCapacidad);
         void listarBajaOcupacion();
 
