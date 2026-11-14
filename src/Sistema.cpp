@@ -62,21 +62,17 @@ void Sistema::mostrarEstacion(string codigo) {
 void Sistema::agregarEstacion(string codigo, string nombre, string barrio, 
                                 int capacidad, int bicisDisponibles) {
 
-    if (estaciones.buscar(codigo) ) {
+    Estacion* estacionNew = new Estacion(codigo, nombre, barrio, capacidad, bicisDisponibles);
+
+    if (this->estaciones.insertar(estacionNew)) {
+
+        cout << "Estacion agregada" << endl;
+
+    } else
+    {
+        delete estacionNew;
         cout << "Estacion ya existe, no se puede agregar" << endl;
-    } else {
-
-        Estacion* estacionNew = new Estacion(codigo, nombre, barrio, capacidad, bicisDisponibles);
-
-        if (this->estaciones.insertar(estacionNew)) {
-
-            cout << "Estacion agregada" << endl;
-
-        } else
-        {
-            cout << "Error al agregar la estacion" << endl;
-        };
-    }
+    };
     
 }
 

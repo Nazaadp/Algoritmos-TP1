@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ListaViajes.h"
+#include "estructuras/ListaViajes.h"
 
 using namespace std;
 
@@ -14,7 +14,7 @@ ListaViajes::ListaViajes()
 ListaViajes::~ListaViajes()
 {
 
-    NodoViaje *auxiliar;
+    Nodo<Viaje*> *auxiliar;
 
     while (!estaVacia())
     {
@@ -28,8 +28,8 @@ ListaViajes::~ListaViajes()
 
 void ListaViajes::agregar(Viaje *viaje)
 {
-    NodoViaje *nuevo = new NodoViaje;
-    nuevo->viaje = viaje;
+    Nodo<Viaje*> *nuevo = new Nodo<Viaje*>;
+    nuevo->dato = viaje;
     nuevo->siguiente = nullptr;
 
     // Funcionamiento cuando la cola esta vacia
@@ -61,14 +61,14 @@ bool ListaViajes::estaVacia()
 int ListaViajes::contarSalidas(string codigo, int desde, int hasta)
 {
     int cantidadSalidas = 0;
-    NodoViaje *nodoActual = primero;
+    Nodo<Viaje*> *nodoActual = primero;
 
     // While hasta que se llegue al ultimo nodoViaje
     while (nodoActual != nullptr)
     {
-        if (nodoActual->viaje->getCodigoOrigen() == codigo &&
-            nodoActual->viaje->getFecha() >= desde &&
-            nodoActual->viaje->getFecha() <= hasta)
+        if (nodoActual->dato->getCodigoOrigen() == codigo &&
+            nodoActual->dato->getFecha() >= desde &&
+            nodoActual->dato->getFecha() <= hasta)
         {
             cantidadSalidas++;
         }
@@ -81,14 +81,14 @@ int ListaViajes::contarSalidas(string codigo, int desde, int hasta)
 // Devuelve la cantidad de minutos pedaleados en total, entre todos los viajes.
 int ListaViajes::mostrarViajesDeUsuario(int dni) {
     int minutosPedaleadosTotal = 0;
-    NodoViaje *nodoActual = primero;
+    Nodo<Viaje*> *nodoActual = primero;
 
     // While hasta que se llegue al ultimo nodoViaje
     while (nodoActual != nullptr)
     {
-        if (nodoActual->viaje->getDniUsuario() == dni)
+        if (nodoActual->dato->getDniUsuario() == dni)
         {
-            minutosPedaleadosTotal += nodoActual->viaje->getDuracionMin();
+            minutosPedaleadosTotal += nodoActual->dato->getDuracionMin();
         }
 
         nodoActual = nodoActual->siguiente;

@@ -1,20 +1,15 @@
-#include <stdexcept>
-#include "../entidades/Viaje.h"
+#ifndef LISTAVIAJES_H
+#define LISTAVIAJES_H
+
+#include "entidades/Viaje.h"
+#include "estructuras/Nodo.h"
 using namespace std;
 
-struct NodoViaje {
-
-    Viaje* viaje;
-    NodoViaje* siguiente;
-
-};
-
-
-class ListaViajes {
-
+class ListaViajes
+{
     private:
-        NodoViaje* primero;
-        NodoViaje* ultimo;
+        Nodo<Viaje*>* primero;
+        Nodo<Viaje*>* ultimo;
 
     public:
         ListaViajes();
@@ -26,3 +21,5 @@ class ListaViajes {
         int contarSalidas(string codigo, int desde, int hasta);
         int mostrarViajesDeUsuario(int dni);
 };
+
+#endif

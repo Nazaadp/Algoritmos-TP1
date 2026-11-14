@@ -10,7 +10,7 @@ RedCiclovias::RedCiclovias(){
 
     this->codigos = new string[this->capacidad];
     this->activos = new bool[this->capacidad];
-    this->adyacencia = new NodoAdyacencia*[this->capacidad];
+    this->adyacencia = new Nodo<int>*[this->capacidad];
 
 };
 
@@ -24,7 +24,7 @@ void RedCiclovias::agrandar() {
 
     string* codigosNew = new string[capacidadNew];
     bool* activosNew = new bool[capacidadNew];
-    NodoAdyacencia** adyacenciaNew = new NodoAdyacencia*[capacidadNew];
+    Nodo<int>** adyacenciaNew = new Nodo<int>*[capacidadNew];
 
     for (int i = 0; i < this->cantidad; i++)
     {

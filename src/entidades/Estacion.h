@@ -2,24 +2,24 @@
 #define ESTACION_H
 
 #include <string>
+using namespace std;
 
-
-class Estacion {
-
+class Estacion
+{
     private:
-        std::string codigo;
-        std::string nombre;
-        std::string barrio;
+        string codigo;
+        string nombre;
+        string barrio;
         int capacidad;
         int bicisDisponibles;
 
     public:
 
         // Constructor
-        Estacion(std::string codigo, std::string nombre, 
-                    std::string barrio, 
+        Estacion(string codigo, string nombre, 
+                    string barrio, 
                         int capacidad, int bicisDisponibles);
-        std::string getCodigo();
+        string getCodigo();
         int getCapacidad();
         int getBicisDisponibles();
         void mostrar();

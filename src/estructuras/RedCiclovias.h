@@ -2,24 +2,19 @@
 #define REDCICLOVIAS_H
 
 #include <string>
-
-struct NodoAdyacencia {
-
-    int vecino;
-    NodoAdyacencia* siguiente;
-
-};
+#include "estructuras/Nodo.h"
+using namespace std;
 
 class RedCiclovias
 {
     private:
-        std::string* codigos;
+        string* codigos;
         bool* activos;
-        NodoAdyacencia** adyacencia;
+        Nodo<int>** adyacencia;
         int cantidad;
         int capacidad;
 
-        int buscarIndice(std::string codigo);
+        int buscarIndice(string codigo);
         void agrandar();    
         void agregarVecino(int vertice, int vecino);
 
@@ -27,10 +22,10 @@ class RedCiclovias
         RedCiclovias();
         ~RedCiclovias();
 
-        void agregarVertice(std::string codigo);
-        void agregarArista(std::string a, std::string b);
-        void eliminarVertice(std:: string codigo);
-        void mostrarCaminoMasCorto(std::string origen, std::string destino);
+        void agregarVertice(string codigo);
+        void agregarArista(string a, string b);
+        void eliminarVertice(string codigo);
+        void mostrarCaminoMasCorto(string origen, string destino);
 };
 
 
