@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "entidades/Bicicleta.h"
+#include "Bicicleta.h"
 
 using namespace std;
 
@@ -45,6 +45,10 @@ int Bicicleta::getPrioridad() {
         return 2;
     }
     return 3;
+}
+
+void Bicicleta::reparar() {
+    this->averiada = false;
 }
 
 // mostrar() Muestra por pantalla los datos de la bicicleta.
