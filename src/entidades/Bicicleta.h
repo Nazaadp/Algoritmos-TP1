@@ -24,6 +24,7 @@ class Bicicleta
         bool estaAveriada();
         int getPrioridad();
         void mostrar();
+        void reparar();
 };
 
 #endif
