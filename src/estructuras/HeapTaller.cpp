@@ -95,7 +95,7 @@ void HeapTaller::insertar(Bicicleta *bici)
     subirNodo(cantidad - 1);
 }
 
-// Automaticamente repara la bicicleta que se extrae del taller, modifica el atributo 'averiada'.
+// Saca del taller la bici mas urgente y la devuelve.
 Bicicleta *HeapTaller::extraerMasUrgente()
 {
 
