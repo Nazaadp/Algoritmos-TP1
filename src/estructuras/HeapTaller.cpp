@@ -65,7 +65,7 @@ void HeapTaller::bajarNodo(int indice)
 
 void HeapTaller::redimensionar()
 {
-    int nuevaCapacidad = capacidad + 10;
+    int nuevaCapacidad = capacidad * 2;
     EntradaTaller *nuevoAlmacenamiento = new EntradaTaller[nuevaCapacidad];
 
     for (int i = 0; i < cantidad; i++)
@@ -115,7 +115,18 @@ Bicicleta *HeapTaller::extraerMasUrgente()
         bajarNodo(0);
     }
 
-    bici->reparar();
-
     return bici;
+}
+
+bool HeapTaller::contiene(int idBici)
+{
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (datos[i].bici->getId() == idBici)
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
