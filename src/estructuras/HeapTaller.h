@@ -27,7 +27,8 @@ class HeapTaller {
         HeapTaller();
         ~HeapTaller();
         void insertar(Bicicleta* bici);
-        Bicicleta* extraerMasUrgente();        
+        Bicicleta* extraerMasUrgente();
+        bool contiene(int idBici);
 };
 
 #endif

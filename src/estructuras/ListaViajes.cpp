@@ -20,6 +20,7 @@ ListaViajes::~ListaViajes()
     {
         auxiliar = primero;
         primero = primero->siguiente;
+        delete auxiliar->dato;
         delete auxiliar;
     }
 
@@ -32,7 +33,7 @@ void ListaViajes::agregar(Viaje *viaje)
     nuevo->dato = viaje;
     nuevo->siguiente = nullptr;
 
-    // Funcionamiento cuando la cola esta vacia
+    // Funcionamiento cuando la lista esta vacia
     if (estaVacia())
     {
         primero = nuevo;
@@ -81,6 +82,7 @@ int ListaViajes::contarSalidas(string codigo, int desde, int hasta)
 // Devuelve la cantidad de minutos pedaleados en total, entre todos los viajes.
 int ListaViajes::mostrarViajesDeUsuario(int dni) {
     int minutosPedaleadosTotal = 0;
+    int cantidadViajes = 0;
     Nodo<Viaje*> *nodoActual = primero;
 
     // While hasta que se llegue al ultimo nodoViaje
@@ -88,10 +90,17 @@ int ListaViajes::mostrarViajesDeUsuario(int dni) {
     {
         if (nodoActual->dato->getDniUsuario() == dni)
         {
+            nodoActual->dato->mostrar();
             minutosPedaleadosTotal += nodoActual->dato->getDuracionMin();
+            cantidadViajes++;
         }
 
         nodoActual = nodoActual->siguiente;
+    }
+
+    if (cantidadViajes == 0)
+    {
+        return -1;
     }
 
     return minutosPedaleadosTotal;
