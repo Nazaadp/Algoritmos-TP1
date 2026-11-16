@@ -1,8 +1,8 @@
 #ifndef LISTAVIAJES_H
 #define LISTAVIAJES_H
 
-#include "entidades/Viaje.h"
-#include "estructuras/Nodo.h"
+#include "../entidades/Viaje.h"
+#include "Nodo.h"
 using namespace std;
 
 class ListaViajes

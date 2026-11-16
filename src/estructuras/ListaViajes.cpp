@@ -1,5 +1,5 @@
 #include <iostream>
-#include "estructuras/ListaViajes.h"
+#include "ListaViajes.h"
 
 using namespace std;
 

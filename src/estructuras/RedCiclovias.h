@@ -2,7 +2,7 @@
 #define REDCICLOVIAS_H
 
 #include <string>
-#include "estructuras/Nodo.h"
+#include "Nodo.h"
 using namespace std;
 
 class RedCiclovias

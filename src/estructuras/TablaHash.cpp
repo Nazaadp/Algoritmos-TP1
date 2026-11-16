@@ -1,5 +1,5 @@
 #include <iostream>
-#include "estructuras/TablaHash.h"
+#include "TablaHash.h"
 
 using namespace std;
 
