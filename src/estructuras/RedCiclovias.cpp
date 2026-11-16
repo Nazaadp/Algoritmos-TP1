@@ -1,5 +1,6 @@
 #include <iostream>
 #include "estructuras/RedCiclovias.h"
+#include "estructuras/Cola.h"
 
 using namespace std;
 
@@ -15,7 +16,32 @@ RedCiclovias::RedCiclovias(){
 };
 
 RedCiclovias::~RedCiclovias() {
-    // FALTA HACER
+    
+    for (int i=0; i < this->cantidad; i++) {
+
+        Nodo<int>* nodo = this->adyacencia[i];
+
+        while (nodo != nullptr)
+        {
+            Nodo<int>* nodoTemp = nodo->siguiente;
+            delete nodo;
+            nodo = nodoTemp;
+        }
+    }
+
+    delete[] this->codigos;
+    delete[] this->activos;
+    delete[] this->adyacencia;
+}
+
+int RedCiclovias::buscarIndice(string codigo) {
+
+    for (int i=0; i < this->cantidad; i++) {
+        if (this->activos[i] && this->codigos[i] == codigo) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 void RedCiclovias::agrandar() {
@@ -43,6 +69,17 @@ void RedCiclovias::agrandar() {
     this->capacidad = capacidadNew;
 }
 
+void RedCiclovias::agregarVecino(int vertice, int vecino){
+
+    Nodo<int>* nodoNew = new Nodo<int>;
+
+    nodoNew->dato = vecino;
+    nodoNew->siguiente = this->adyacencia[vertice];
+
+    this->adyacencia[vertice] = nodoNew;
+
+}
+
 void RedCiclovias::agregarVertice(string codigo) {
 
     if (this->capacidad == this->cantidad)
@@ -57,3 +94,103 @@ void RedCiclovias::agregarVertice(string codigo) {
     cantidad++;
 }
 
+void RedCiclovias::agregarArista(string a, string b) {
+    
+    int indiceA = this->buscarIndice(a);
+    int indiceB = this->buscarIndice(b);
+
+    if (indiceA == -1 || indiceB == -1) {
+        return;
+    }
+
+    this->agregarVecino(indiceA, indiceB);
+    this->agregarVecino(indiceB, indiceA);
+}
+
+void RedCiclovias::eliminarVertice(string codigo) {
+    
+    int indice = this->buscarIndice(codigo);
+
+    if (indice != -1) {
+        this->activos[indice] = false;
+    }
+
+}
+
+void RedCiclovias::mostrarCaminoMasCorto(string origen, string destino){
+    
+    int inicio = this->buscarIndice(origen);
+    int fin = this->buscarIndice(destino);
+
+    if (inicio == -1 || fin == -1)
+    {
+        return;
+    }
+
+    bool* visitado = new bool[this->cantidad];
+    int* padre = new int[this->cantidad];
+
+    for (int i = 0; i < this->cantidad; i++)
+    {
+        visitado[i] = false;
+        padre[i] = -1;
+    }
+
+    Cola porVisitar;
+    porVisitar.encolar(inicio);
+    visitado[inicio] = true;
+
+    while (!porVisitar.estaVacia())
+    {
+        int actual = porVisitar.desencolar();
+
+        if (actual == fin) {
+            break;
+        }
+
+        Nodo<int>* nodo = this->adyacencia[actual];
+
+        while (nodo != nullptr)
+        {
+            int vecino = nodo->dato;
+
+            if (this->activos[vecino] && !visitado[vecino]) {
+                visitado[vecino] = true;
+                padre[vecino] = actual;
+                porVisitar.encolar(vecino);
+            }
+
+            nodo = nodo->siguiente;
+        }
+    }
+
+    if (!visitado[fin]) {
+
+        cout << "No existe recorrido entre " << origen << " y " << destino << endl;
+
+    } else {
+
+        int* camino = new int[this->cantidad];
+        int largo = 0;
+
+        for (int v = fin; v != -1; v = padre[v]) {
+            camino[largo] = v;
+            largo++;
+        }
+
+        cout << "Tramos: " << largo - 1 << " |";
+
+        for (int i = largo - 1; i >= 0; i--) {
+            cout << " " << this->codigos[camino[i]];
+        }
+        cout << endl;
+
+        delete[] camino;
+    }
+
+    delete[] visitado;
+    delete[] padre;
+    
+    
+
+}

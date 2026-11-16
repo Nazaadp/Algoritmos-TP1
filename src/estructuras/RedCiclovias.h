@@ -8,14 +8,15 @@ using namespace std;
 class RedCiclovias
 {
     private:
-        string* codigos;
-        bool* activos;
-        Nodo<int>** adyacencia;
         int cantidad;
         int capacidad;
 
+        string* codigos;
+        bool* activos;
+        Nodo<int>** adyacencia;
+        
         int buscarIndice(string codigo);
-        void agrandar();    
+        void agrandar();
         void agregarVecino(int vertice, int vecino);
 
     public:
