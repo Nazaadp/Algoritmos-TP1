@@ -1,7 +1,7 @@
 #ifndef COLA_H
 #define COLA_H
 
-#include "estructuras/Nodo.h"
+#include "Nodo.h"
 
 class Cola
 {

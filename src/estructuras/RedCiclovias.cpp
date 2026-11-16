@@ -1,6 +1,6 @@
 #include <iostream>
-#include "estructuras/RedCiclovias.h"
-#include "estructuras/Cola.h"
+#include "RedCiclovias.h"
+#include "Cola.h"
 
 using namespace std;
 

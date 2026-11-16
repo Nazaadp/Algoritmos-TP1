@@ -1,5 +1,5 @@
 #include <iostream>
-#include "entidades/Estacion.h"
+#include "Estacion.h"
 
 using namespace std;
 

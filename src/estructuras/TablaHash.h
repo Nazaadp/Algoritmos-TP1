@@ -2,8 +2,8 @@
 #define TABLAHASH_H
 
 #include <string>
-#include "entidades/Estacion.h"
-#include "estructuras/Nodo.h"
+#include "../entidades/Estacion.h"
+#include "Nodo.h"
 using namespace std;
 
 class TablaHash

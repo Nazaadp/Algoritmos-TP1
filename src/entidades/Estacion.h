@@ -2,7 +2,7 @@
 #define ESTACION_H
 
 #include <string>
-#include "estructuras/Cola.h"
+#include "../estructuras/Cola.h"
 using namespace std;
 
 class Estacion

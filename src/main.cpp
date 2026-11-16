@@ -232,7 +232,7 @@ void menuBicicletas(Sistema& sistema) {
 int main() {
 
     Sistema sistema;
-    sistema.cargarDatos("datos");
+    sistema.cargarDatos("../datos");
 
     int opcion = -1;
 
