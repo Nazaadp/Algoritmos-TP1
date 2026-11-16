@@ -161,7 +161,7 @@ Se eligió un min-heap porque permite organizar las bicicletas según su priorid
 
 # C. Registro de bicicletas con árbol binario de búsqueda
 
-### Análisis: efecto de insertar bicicletas ordenadas por ID
+### ¿Qué altura tendría el árbol si las bicicletas se cargaran ordenadas por ID? ¿Cómo afecta eso al costo de la búsqueda? Responder con un ejemplo de 5 bicicletas. 
 
 Si las bicicletas se cargaran ordenadas por ID, el ABB quedaría completamente desbalanceado, formando una estructura similar a una lista enlazada.
 
