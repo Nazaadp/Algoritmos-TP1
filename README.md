@@ -58,7 +58,7 @@ Contiene las implementaciones propias de las estructuras de datos utilizadas:
 - **TablaHash:** implementa una tabla hash para almacenar y buscar estaciones mediante sus códigos. Utiliza baldes que contienen listas enlazadas para gestionar las colisiones.
 - **ArbolBicicletas:** árbol binario de búsqueda ordenado por identificador de bicicleta.
 - **Cola:** estructura FIFO utilizada para administrar solicitudes de bicicletas.
-- **HeapTaller:** montículo mínimo utilizado para organizar las bicicletas que requieren reparación según su prioridad.
+- **HeapTaller:** minheap utilizado para organizar las bicicletas que requieren reparación según su prioridad.
 - **ListaViajes:** lista enlazada que permite almacenar y administrar los viajes realizados. Incluye funcionalidades para contar las salidas de una estación dentro de un período determinado y mostrar los viajes de un usuario.
 - **RedCiclovias:** representa la red de ciclovías mediante un grafo no dirigido implementado con listas de adyacencia. Permite agregar y eliminar vértices, agregar conexiones entre estaciones y calcular el camino más corto mediante BFS.
 
