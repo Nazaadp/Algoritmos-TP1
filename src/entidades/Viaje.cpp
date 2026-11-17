@@ -1,5 +1,5 @@
 #include <iostream>
-#include "entidades/Viaje.h"
+#include "Viaje.h"
 
 using namespace std;
 

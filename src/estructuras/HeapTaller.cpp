@@ -65,7 +65,7 @@ void HeapTaller::bajarNodo(int indice)
 
 void HeapTaller::redimensionar()
 {
-    int nuevaCapacidad = capacidad + 10;
+    int nuevaCapacidad = capacidad * 2;
     EntradaTaller *nuevoAlmacenamiento = new EntradaTaller[nuevaCapacidad];
 
     for (int i = 0; i < cantidad; i++)
@@ -95,7 +95,7 @@ void HeapTaller::insertar(Bicicleta *bici)
     subirNodo(cantidad - 1);
 }
 
-// Automaticamente repara la bicicleta que se extrae del taller, modifica el atributo 'averiada'.
+// Saca del taller la bici mas urgente y la devuelve.
 Bicicleta *HeapTaller::extraerMasUrgente()
 {
 
@@ -115,7 +115,18 @@ Bicicleta *HeapTaller::extraerMasUrgente()
         bajarNodo(0);
     }
 
-    bici->reparar();
-
     return bici;
+}
+
+bool HeapTaller::contiene(int idBici)
+{
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (datos[i].bici->getId() == idBici)
+        {
+            return true;
+        }
+    }
+
+    return false;
 }

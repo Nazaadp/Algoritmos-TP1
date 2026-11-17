@@ -13,44 +13,50 @@ ArbolBicicletas::~ArbolBicicletas() {
     liberar(raiz);
 }
 
-void ArbolBicicletas::insertarBicicletas(Bicicleta* bici) {
-    insertarRecursivo(raiz, bici);
+bool ArbolBicicletas::insertarBicicletas(Bicicleta* bici) {
+    return insertarRecursivo(raiz, bici);
 }
 
-// Al utilizar el simbolo '&' en el parametro, estoy modificando directamente al puntero original, 
+// Al utilizar el simbolo '&' en el parametro, estoy modificando directamente al puntero original,
 // quedando asignado correctamente la nueva bicicleta. Sin el simbolo, esto no funcionaria.
-void ArbolBicicletas::insertarRecursivo(NodoArbol<Bicicleta*>* &nodo, Bicicleta* bici) {
+bool ArbolBicicletas::insertarRecursivo(NodoArbol<Bicicleta*>* &nodo, Bicicleta* bici) {
 
     if (nodo == nullptr) {
         nodo = new NodoArbol<Bicicleta*>;
         nodo->dato = bici;
         nodo->izquierdo = nullptr;
         nodo->derecho = nullptr;
+        return true;
     }
     else if (bici->getId() < nodo->dato->getId()) {
-        insertarRecursivo(nodo->izquierdo, bici);
+        return insertarRecursivo(nodo->izquierdo, bici);
     }
     else if (bici->getId() > nodo->dato->getId()) {
-        insertarRecursivo(nodo->derecho, bici);
+        return insertarRecursivo(nodo->derecho, bici);
     }
+
+    return false;
 }
 
-Bicicleta* ArbolBicicletas::buscar(int id) {
-    return buscarRecursivo(raiz, id);
+Bicicleta* ArbolBicicletas::buscar(int id, int& visitados) {
+    visitados = 0;
+    return buscarRecursivo(raiz, id, visitados);
 }
 
-Bicicleta* ArbolBicicletas::buscarRecursivo(NodoArbol<Bicicleta*>* nodo, int id) {
+Bicicleta* ArbolBicicletas::buscarRecursivo(NodoArbol<Bicicleta*>* nodo, int id, int& visitados) {
     if (nodo == nullptr) {
         return nullptr;
     }
+
+    visitados++;
 
     if (nodo->dato->getId() == id) {
         return nodo->dato;
     } else {
         if (id < nodo->dato->getId()) {
-            return buscarRecursivo(nodo->izquierdo, id);
+            return buscarRecursivo(nodo->izquierdo, id, visitados);
         } else {
-            return buscarRecursivo(nodo->derecho, id);
+            return buscarRecursivo(nodo->derecho, id, visitados);
         }
     }
 }
@@ -75,7 +81,7 @@ int ArbolBicicletas::contarAveriadas() {
     return contarAveriadasRecursivo(raiz);   
 }
 
-// Recorre inorder el arbol, contando 1 en donde haya una bici averiada.
+// Recorre el arbol en preorder, contando 1 en donde haya una bici averiada.
 int ArbolBicicletas::contarAveriadasRecursivo(NodoArbol<Bicicleta*> *nodo) {
     if (nodo == nullptr) {
         return 0;
@@ -112,27 +118,71 @@ int ArbolBicicletas::calcularAlturaRecursivo(NodoArbol<Bicicleta*> *nodo) {
     }
 }
 
-void ArbolBicicletas::listarConMasKm(int km) {
-    listarConMasKmRecursivo(raiz, km);
+int ArbolBicicletas::listarConMasKm(int km) {
+    return listarConMasKmRecursivo(raiz, km);
 }
 
-void ArbolBicicletas::listarConMasKmRecursivo(NodoArbol<Bicicleta*> *nodo, int km) {
+int ArbolBicicletas::listarConMasKmRecursivo(NodoArbol<Bicicleta*> *nodo, int km) {
     if (nodo == nullptr) {
-        return;
+        return 0;
     }
 
-    listarConMasKmRecursivo(nodo->izquierdo, km);
-    
+    int cantidad = listarConMasKmRecursivo(nodo->izquierdo, km);
+
     if (nodo->dato->getKilometros() > km) {
         nodo->dato->mostrar();
+        cantidad++;
     }
 
-    listarConMasKmRecursivo(nodo->derecho, km);
+    cantidad += listarConMasKmRecursivo(nodo->derecho, km);
+
+    return cantidad;
 }
 
-void ArbolBicicletas::eliminar(int id) {
-    cout << "Hago algo!";
-    // COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR COMPLETAR
+bool ArbolBicicletas::eliminar(int id) {
+    return eliminarRecursivo(raiz, id);
+}
+
+bool ArbolBicicletas::eliminarRecursivo(NodoArbol<Bicicleta*>* &nodo, int id) {
+
+    if (nodo == nullptr) {
+        return false;
+    }
+
+    if (id < nodo->dato->getId()) {
+        return eliminarRecursivo(nodo->izquierdo, id);
+    }
+    else if (id > nodo->dato->getId()) {
+        return eliminarRecursivo(nodo->derecho, id);
+    }
+
+    if (nodo->izquierdo != nullptr && nodo->derecho != nullptr) {
+
+        NodoArbol<Bicicleta*>* sucesor = nodo->derecho;
+
+        while (sucesor->izquierdo != nullptr) {
+            sucesor = sucesor->izquierdo;
+        }
+
+        Bicicleta* aux = nodo->dato;
+        nodo->dato = sucesor->dato;
+        sucesor->dato = aux;
+
+        return eliminarRecursivo(nodo->derecho, id);
+    }
+
+    NodoArbol<Bicicleta*>* borrar = nodo;
+
+    if (nodo->izquierdo != nullptr) {
+        nodo = nodo->izquierdo;
+    } else {
+        nodo = nodo->derecho;
+    }
+
+    delete borrar->dato;
+    delete borrar;
+
+    return true;
 }
 
 void ArbolBicicletas::liberar(NodoArbol<Bicicleta*>* nodo) {
@@ -143,5 +193,6 @@ void ArbolBicicletas::liberar(NodoArbol<Bicicleta*>* nodo) {
     liberar(nodo->izquierdo);
     liberar(nodo->derecho);
 
+    delete nodo->dato;
     delete nodo;
 }

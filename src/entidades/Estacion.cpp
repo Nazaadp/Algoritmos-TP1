@@ -1,5 +1,5 @@
 #include <iostream>
-#include "entidades/Estacion.h"
+#include "Estacion.h"
 
 using namespace std;
 
@@ -15,7 +15,6 @@ Estacion::Estacion(string codigo, string nombre, string barrio,
 
 }
 
-// getCodigo() Devuelve el codigo de la Estacion.
 string Estacion::getCodigo() {
 
     return this->codigo;
@@ -44,5 +43,32 @@ void Estacion::mostrar() {
 
     cout << this->codigo << " - " << this->nombre << "(" << this->barrio << ")" << endl;
     cout << "bicis: " << this->bicisDisponibles << " | capacidad: "  << this->capacidad << endl;
+
+}
+
+bool Estacion::retirarBici(int dni) {
+
+    if (this->bicisDisponibles > 0) {
+        this->bicisDisponibles--;
+        return true;
+    }
+
+    this->colaEspera.encolar(dni);
+    return false;
+
+}
+
+int Estacion::devolverBici() {
+
+    if (!this->colaEspera.estaVacia()) {
+        return this->colaEspera.desencolar();
+    }
+
+    if (this->bicisDisponibles < this->capacidad) {
+        this->bicisDisponibles++;
+        return 0;
+    }
+
+    return -1;
 
 }

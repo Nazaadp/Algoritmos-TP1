@@ -1,5 +1,5 @@
 #include <iostream>
-#include "estructuras/Cola.h"
+#include "Cola.h"
 
 using namespace std;
 

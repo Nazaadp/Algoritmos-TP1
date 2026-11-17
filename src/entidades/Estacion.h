@@ -2,6 +2,7 @@
 #define ESTACION_H
 
 #include <string>
+#include "../estructuras/Cola.h"
 using namespace std;
 
 class Estacion
@@ -12,18 +13,22 @@ class Estacion
         string barrio;
         int capacidad;
         int bicisDisponibles;
+        Cola colaEspera;
 
     public:
 
         // Constructor
-        Estacion(string codigo, string nombre, 
-                    string barrio, 
+        Estacion(string codigo, string nombre,
+                    string barrio,
                         int capacidad, int bicisDisponibles);
         string getCodigo();
         int getCapacidad();
         int getBicisDisponibles();
         void mostrar();
         bool tieneBajaOcupacion();
+
+        bool retirarBici(int dni);
+        int devolverBici();
 
 };
 

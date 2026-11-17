@@ -17,25 +17,24 @@ class ArbolBicicletas {
         NodoArbol<Bicicleta*>* raiz;
 
         void liberar(NodoArbol<Bicicleta*>* nodo);
-        void insertarRecursivo(NodoArbol<Bicicleta*>* &nodo, Bicicleta* bici);
-        Bicicleta* buscarRecursivo(NodoArbol<Bicicleta*>* nodo, int id);
+        bool insertarRecursivo(NodoArbol<Bicicleta*>* &nodo, Bicicleta* bici);
+        Bicicleta* buscarRecursivo(NodoArbol<Bicicleta*>* nodo, int id, int& visitados);
         void listarInorderRecursivo(NodoArbol<Bicicleta*>* nodo);
         int contarAveriadasRecursivo(NodoArbol<Bicicleta*>* nodo);
         int calcularAlturaRecursivo(NodoArbol<Bicicleta*>* nodo);
-        void listarConMasKmRecursivo(NodoArbol<Bicicleta*>* nodo, int km);
+        int listarConMasKmRecursivo(NodoArbol<Bicicleta*>* nodo, int km);
+        bool eliminarRecursivo(NodoArbol<Bicicleta*>* &nodo, int id);
 
     public:
         ArbolBicicletas();
         ~ArbolBicicletas();
-        void insertarBicicletas(Bicicleta* bici);
-        Bicicleta* buscar(int id);
+        bool insertarBicicletas(Bicicleta* bici);
+        Bicicleta* buscar(int id, int& visitados);
         void listarInorder();
         int contarAveriadas();
         int calcularAltura();
-        void listarConMasKm(int km);
-        
-        // ver si eliminar() se favorece de retornar booleano.
-        void eliminar(int id);        
+        int listarConMasKm(int km);
+        bool eliminar(int id);
 };
 
 #endif
