@@ -202,3 +202,6 @@ La búsqueda tiene una complejidad temporal O(2^n), donde *n* representa la cant
 **Estructura elegida: Array**
 
 Se eligieron dos array del mismo tamaño: uno de punteros a `Estacion` y otro de `bool` que marca las estaciones de la combinación que se está armando. Los array permiten acceder a cada estación por su posición en O(1), que es lo que necesita la recursión, y su tamaño se conoce de antemano a partir de la cantidad de estaciones de la tabla. Se guardan punteros en lugar de copias porque la `Redistribucion` solo consulta las estaciones: no es dueña de ellas y no las libera. 
+
+## Presentacion
+En la carpeta raíz del proyecto se encuentra el archivo "Presentacion TPBici Grupo1.pdf", en el cual se explican paso a paso algunas de las funcionalidades más interesantes del programa. Además, se incluyen datos de ejemplo que permiten realizar pruebas y comprobar su funcionamiento.
