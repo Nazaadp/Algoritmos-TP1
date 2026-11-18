@@ -9,16 +9,16 @@ El sistema permite administrar estaciones, bicicletas y viajes, además de gesti
 ## 2. Compilación y ejecución
 
 ### Requisitos
-- Compilador C++ compatible con C++11 o superior.
-- Git Bash o una terminal compatible.
+- Compilador g++ compatible con C++17.
+- Git Bash, PowerShell o una terminal compatible.
 
 ### Compilación
 
-### Paso 1: Ubicarse en la carpeta del proyecto
+#### Paso 1: Ubicarse en la carpeta del proyecto
 
 Luego de clonar o descargar el repositorio, abrir una terminal en la carpeta raíz del proyecto.
 
-### Paso 2: Ingresar a la carpeta `src`
+#### Paso 2: Ingresar a la carpeta `src`
 
 Desde la raíz del proyecto, ejecutar:
 
@@ -26,7 +26,7 @@ Desde la raíz del proyecto, ejecutar:
 cd src
 ```
 
-### Paso 3: Compilar el programa
+#### Paso 3: Compilar el programa
 
 Una vez dentro de `src`, ejecutar:
 
@@ -34,7 +34,7 @@ Una vez dentro de `src`, ejecutar:
 g++ -std=c++17 -Wall -Wextra main.cpp Sistema.cpp estructuras/*.cpp entidades/*.cpp -o TPBici.exe
 ```
 
-### Paso 4: Ejecutar el programa
+#### Paso 4: Ejecutar el programa
 
 ```bash
 ./TPBici.exe
@@ -49,18 +49,19 @@ Contiene las clases que representan los elementos principales del sistema:
 
 - **Bicicleta:** representa una bicicleta y almacena sus atributos, como identificador, estación, tipo, estado y kilometraje.
 - **Estacion:** representa una estación de bicicletas, con información sobre su ubicación, capacidad y bicicletas disponibles.
-- **Viaje:** representa un viaje realizado o solicitado entre estaciones.
+- **Viaje:** representa un viaje realizado.
 
 ### Estructuras
 
 Contiene las implementaciones propias de las estructuras de datos utilizadas:
 
+- **`Nodo<T>`:** nodo genérico de lista enlazada, con `dato` y `siguiente`. Se usa como `Nodo<Estacion*>` en TablaHash, `Nodo<Viaje*>` en ListaViajes y `Nodo<int>` en Cola y RedCiclovias.
 - **TablaHash:** implementa una tabla hash para almacenar y buscar estaciones mediante sus códigos. Utiliza baldes que contienen listas enlazadas para gestionar las colisiones.
 - **ArbolBicicletas:** árbol binario de búsqueda ordenado por identificador de bicicleta.
-- **Cola:** estructura FIFO utilizada para administrar solicitudes de bicicletas.
-- **HeapTaller:** montículo mínimo utilizado para organizar las bicicletas que requieren reparación según su prioridad.
+- **Cola:** estructura FIFO de integers utilizada para administrar solicitudes de bicicletas y estaciones.
+- **HeapTaller:** montículo mínimo (min-heap) utilizado para organizar las bicicletas que requieren reparación según su prioridad.
 - **ListaViajes:** lista enlazada que permite almacenar y administrar los viajes realizados. Incluye funcionalidades para contar las salidas de una estación dentro de un período determinado y mostrar los viajes de un usuario.
-- **RedCiclovias:** representa la red de ciclovías mediante un grafo no dirigido implementado con listas de adyacencia. Permite agregar y eliminar vértices, agregar conexiones entre estaciones y calcular el camino más corto mediante BFS.
+- **RedCiclovias:** representa la red de ciclovías mediante un grafo no dirigido implementado con listas de adyacencia. Permite agregar y eliminar vértices, agregar conexiones entre estaciones y calcular el camino de menos tramos mediante BFS.
 
 
 ### Sistema
@@ -69,7 +70,7 @@ La clase `Sistema` integra las distintas entidades y estructuras de datos, coord
 
 ### Main
 
-Contiene el punto de entrada del programa y permite iniciar la ejecución del sistema.
+Contiene el punto de entrada del programa y permite iniciar la ejecución del sistema. Muestra por consola el menú principal con un submenú por parte del enunciado.
 
 
 ### Datos
@@ -85,23 +86,23 @@ Las estructuras de datos fueron implementadas manualmente mediante memoria diná
 Se utilizan estructuras específicas según las necesidades de cada funcionalidad:
 
 - **Árbol binario de búsqueda:** permite organizar las bicicletas por su identificador y realizar operaciones de búsqueda, inserción y eliminación.
-- **Cola:** permite gestionar informacion respetando el orden de llegada (FIFO).
-- **Heap mínimo:** permite organizar las bicicletas que ingresan al taller según su prioridad de reparación, atendiendo primero las de mayor prioridad.
+- **Cola:** permite gestionar información respetando el orden de llegada (FIFO).
+- **Heap mínimo:** permite organizar las bicicletas que ingresan al taller según su prioridad de reparación, atendiendo primero las más urgentes.
 - **Tabla hash:** utiliza una función hash basada en acumulación polinómica para calcular la posición de cada estación a partir de su código. Las colisiones se resuelven mediante encadenamiento separado, utilizando listas enlazadas en cada balde. También permite consultar la cantidad de colisiones y calcular el factor de carga.
 - **Lista enlazada:** se utiliza para almacenar los viajes realizados y facilitar su recorrido, consulta y administración.
-- **Grafo:** representa la red de ciclovías mediante listas de adyacencia, permitiendo modelar las conexiones entre estaciones y encontrar el camino más corto entre dos puntos.
+- **Grafo:** representa la red de ciclovías mediante listas de adyacencia, permitiendo modelar las conexiones entre estaciones y encontrar el camino de menos tramos entre dos puntos.
 
 
 ## 5. Consignas de análisis
-# A. Gestión de estaciones
+### A. Gestión de estaciones
 Con los datos de prueba utilizados, correspondientes a 21 estaciones y una capacidad de 41 baldes en la tabla hash, se obtuvieron los siguientes resultados:
 
 - **Factor de carga:** 0,51 (51,2 %).
 - **Cantidad total de colisiones:** 4.
 
-# B. Viajes y colas de espera
+### B. Viajes y colas de espera
 
-### 1. Calcular la cantidad de viajes que salieron de una estación dentro de un rango de fechas. 
+#### 1. Calcular la cantidad de viajes que salieron de una estación dentro de un rango de fechas. 
 
 **Complejidad temporal:** `O(n)`
 
@@ -113,7 +114,7 @@ Se eligió una lista enlazada porque permite almacenar los viajes dinámicamente
 
 ---
 
-### 2. Buscar todos los viajes de un usuario dado su DNI y mostrar el total de minutos pedaleados. 
+#### 2. Buscar todos los viajes de un usuario dado su DNI y mostrar el total de minutos pedaleados. 
 
 **Complejidad temporal:** `O(n)`
 
@@ -125,7 +126,7 @@ Se eligió una lista enlazada porque permite almacenar los viajes dinámicamente
 
 ---
 
-### 3. Listar las bicicletas con más de X kilómetros, donde X lo ingresa el usuario, para enviarlas a revisión. 
+#### 3. Listar las bicicletas con más de X kilómetros, donde X lo ingresa el usuario, para enviarlas a revisión. 
 
 **Complejidad temporal:** `O(n)`
 
@@ -137,11 +138,13 @@ Se eligió un árbol binario de búsqueda (ABB) porque era necesario organizar l
 
 ---
 
-### 4. Implementar una cola de espera por estación: si un usuario quiere retirar una bici y no hay disponibles, se encola. Cuando se devuelve una bici en esa estación, se le asigna al primero de la cola. 
+#### 4. Implementar una cola de espera por estación: si un usuario quiere retirar una bici y no hay disponibles, se encola. Cuando se devuelve una bici en esa estación, se le asigna al primero de la cola. 
 
-**Complejidad temporal:** `O(1)`
+**Complejidad temporal:** 
+ - Retirar una bici: `O(n)` donde n es el tamaño de colaEspera
+ - Devolver una bici: `O(1)`
 
-Las operaciones de retiro y devolución tienen una complejidad temporal O(1), ya que las operaciones de encolar y desencolar se realizan directamente sobre los extremos de la cola, sin necesidad de recorrer sus elementos.
+La operación de retiro tiene una complejidad de O(n), ya que la operación de retiro en el peor caso debe recorrer toda la `colaEspera` para verificar que el DNI que pide retirar no se repita. Devolución tiene una complejidad temporal O(1), ya que la operación de desencolar se realiza directamente sobre el extremo de la cola, sin necesidad de recorrer sus elementos.
 
 **Estructura elegida: Cola enlazada**
 
@@ -149,7 +152,15 @@ Se eligió una cola porque permite administrar las solicitudes de los usuarios r
 
 ---
 
-### 5. Implementar una cola de prioridad (min-heap) para el taller de reparaciones. Cada bicicleta averiada entra con una prioridad del 1 (más urgente) al 3; las eléctricas entran siempre con prioridad 1. Solo se piden dos operaciones: insertar una bici y extraer la más urgente. 
+#### 5. Implementar una cola de prioridad (min-heap) para el taller de reparaciones. Cada bicicleta averiada entra con una prioridad del 1 (más urgente) al 3; las eléctricas entran siempre con prioridad 1. Solo se piden dos operaciones: insertar una bici y extraer la más urgente. 
+
+**Prioridad de bicicletas**
+
+Las bicicletas eléctricas ingresan siempre con prioridad 1 (más urgente). Las mecánicas ingresan con prioridad 1 a 3 dependiendo los km recorridos:
+
+ - `km >= 6000`: prioridad 1
+ - `4000 <= km < 6000`: prioridad 2
+ - `km < 4000`: prioridad 3
 
 **Complejidad temporal:** `O(log n)`
 
@@ -159,9 +170,9 @@ Ambas operaciones tienen una complejidad temporal O(log n), ya que después de i
 
 Se eligió un min-heap porque permite organizar las bicicletas según su prioridad de reparación, manteniendo en la raíz aquella que debe atenderse primero. Esta estructura permite insertar nuevas bicicletas y extraer la más urgente de manera eficiente, sin necesidad de ordenar todos los elementos.
 
-# C. Registro de bicicletas con árbol binario de búsqueda
+### C. Registro de bicicletas con árbol binario de búsqueda
 
-### ¿Qué altura tendría el árbol si las bicicletas se cargaran ordenadas por ID? ¿Cómo afecta eso al costo de la búsqueda? Responder con un ejemplo de 5 bicicletas. 
+#### ¿Qué altura tendría el árbol si las bicicletas se cargaran ordenadas por ID? ¿Cómo afecta eso al costo de la búsqueda? Responder con un ejemplo de 5 bicicletas. 
 
 Si las bicicletas se cargaran ordenadas por ID, el ABB quedaría completamente desbalanceado, formando una estructura similar a una lista enlazada.
 
