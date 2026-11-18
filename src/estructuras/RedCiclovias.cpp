@@ -117,14 +117,14 @@ void RedCiclovias::eliminarVertice(string codigo) {
 
 }
 
-void RedCiclovias::mostrarCaminoMasCorto(string origen, string destino){
+bool RedCiclovias::mostrarCaminoMasCorto(string origen, string destino) {
     
     int inicio = this->buscarIndice(origen);
     int fin = this->buscarIndice(destino);
 
     if (inicio == -1 || fin == -1)
     {
-        return;
+        return false;
     }
 
     bool* visitado = new bool[this->cantidad];
@@ -164,11 +164,9 @@ void RedCiclovias::mostrarCaminoMasCorto(string origen, string destino){
         }
     }
 
-    if (!visitado[fin]) {
+    bool encontrado = visitado[fin];
 
-        cout << "No existe recorrido entre " << origen << " y " << destino << endl;
-
-    } else {
+    if (encontrado) {
 
         int* camino = new int[this->cantidad];
         int largo = 0;
@@ -191,6 +189,5 @@ void RedCiclovias::mostrarCaminoMasCorto(string origen, string destino){
     delete[] visitado;
     delete[] padre;
     
-    
-
+    return encontrado;
 }

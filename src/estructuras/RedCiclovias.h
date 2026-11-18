@@ -26,7 +26,7 @@ class RedCiclovias
         void agregarVertice(string codigo);
         void agregarArista(string a, string b);
         void eliminarVertice(string codigo);
-        void mostrarCaminoMasCorto(string origen, string destino);
+        bool mostrarCaminoMasCorto(string origen, string destino);
 };
 
 
