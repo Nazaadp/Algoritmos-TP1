@@ -47,6 +47,7 @@ int TablaHash::funcionHash(string codigo) {
     // se llama pos para hacer referencia a su posicion en el array de baldes
     int pos = 0;
 
+    // unsigned para que no de nro negativo
     for ( unsigned char letra : codigo) {
 
         pos = ( pos * 31 + letra ) % this->tamanio ;
