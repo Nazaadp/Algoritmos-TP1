@@ -1,0 +1,893 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases" name="Diagrama de clases">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2140" pageHeight="1950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ref-fondo" parent="1" vertex="1" value="" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B3B3B3;">
+          <mxGeometry x="40" y="110" width="560" height="283" as="geometry" />
+        </mxCell>
+        <mxCell id="titulo" parent="1" vertex="1" value="Sistema de Bicicletas Públicas — Diagrama de clases" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontColor=#1A1A1A;fontFamily=Helvetica;fontStyle=1;">
+          <mxGeometry x="40" y="24" width="620" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" vertex="1" value="Trabajo práctico final de Algoritmos · UNAHUR · 2C 2026" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#666666;fontFamily=Helvetica;">
+          <mxGeometry x="40" y="58" width="420" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-titulo" parent="1" vertex="1" value="Referencias" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#1A1A1A;fontFamily=Helvetica;fontStyle=1;">
+          <mxGeometry x="56" y="122" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-comp-txt" parent="1" vertex="1" value="&lt;b&gt;Composición&lt;/b&gt;: la parte pertenece al dueño y se destruye con él (el dueño hace &lt;i&gt;delete&lt;/i&gt; o la parte es un atributo por valor). El rombo va del lado del dueño, con multiplicidad 1." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="150" y="154" width="440" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-comp" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="178.5" as="sourcePoint" />
+            <mxPoint x="130" y="178.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ref-asoc-txt" parent="1" vertex="1" value="&lt;b&gt;Asociación&lt;/b&gt;: guarda un puntero, pero no destruye el objeto." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="150" y="213" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-asoc" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="223" as="sourcePoint" />
+            <mxPoint x="130" y="223" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ref-dep-txt" parent="1" vertex="1" value="&lt;b&gt;Dependencia&lt;/b&gt;: la usa solo dentro de un método (variable local)." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="150" y="243" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-dep" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;dashed=1;labelBackgroundColor=#FFFFFF;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="253" as="sourcePoint" />
+            <mxPoint x="130" y="253" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ref-plantilla-txt" parent="1" vertex="1" value="&lt;b&gt;Template&lt;/b&gt;: el recuadro punteado es su parámetro de tipo." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="150" y="273" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-plantilla" parent="1" vertex="1" value="T" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;fontFamily=Helvetica;align=center;verticalAlign=middle;">
+          <mxGeometry x="92" y="273" width="26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip0" parent="1" vertex="1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;">
+          <mxGeometry x="60" y="311" width="16" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip0-txt" parent="1" vertex="1" value="Coordinación" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="82" y="307" width="79" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip1" parent="1" vertex="1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;">
+          <mxGeometry x="183" y="311" width="16" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip1-txt" parent="1" vertex="1" value="Estructura de datos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="205" y="307" width="113" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip2" parent="1" vertex="1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;">
+          <mxGeometry x="340" y="311" width="16" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip2-txt" parent="1" vertex="1" value="«struct»" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="362" y="307" width="51" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip3" parent="1" vertex="1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;">
+          <mxGeometry x="435" y="311" width="16" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip3-txt" parent="1" vertex="1" value="Entidad" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="457" y="307" width="49" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip4" parent="1" vertex="1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;">
+          <mxGeometry x="60" y="335" width="16" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-chip4-txt" parent="1" vertex="1" value="Algoritmo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="82" y="331" width="59" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ref-vis" parent="1" vertex="1" value="Visibilidad: + público, - privado. Solo se muestran los getters que usan otras clases." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1A1A1A;fontFamily=Helvetica;">
+          <mxGeometry x="60" y="361" width="520" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema" parent="1" vertex="1" value="Sistema" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="850" y="110" width="370" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-a0" parent="Sistema" vertex="1" value="- estaciones: TablaHash" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-a1" parent="Sistema" vertex="1" value="- ciclovias: RedCiclovias" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-a2" parent="Sistema" vertex="1" value="- bicicletas: ArbolBicicletas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="66" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-a3" parent="Sistema" vertex="1" value="- viajes: ListaViajes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="86" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-a4" parent="Sistema" vertex="1" value="- taller: HeapTaller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="106" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-sep" parent="Sistema" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="126" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m0" parent="Sistema" vertex="1" value="+ Sistema()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="134" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m1" parent="Sistema" vertex="1" value="+ cargarDatos(carpeta: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m2" parent="Sistema" vertex="1" value="+ mostrarEstacion(codigo: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m3" parent="Sistema" vertex="1" value="+ agregarEstacion(codigo: string, nombre: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;barrio: string, capacidad: int,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;bicisDisponibles: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="194" width="370" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m4" parent="Sistema" vertex="1" value="+ eliminarEstacion(codigo: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="244" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m5" parent="Sistema" vertex="1" value="+ listarEstacionesOrdenadas(porCapacidad: bool): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="264" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m6" parent="Sistema" vertex="1" value="+ listarBajaOcupacion(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="284" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m7" parent="Sistema" vertex="1" value="+ mostrarRecorrido(origen: string, destino: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="304" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m8" parent="Sistema" vertex="1" value="+ mostrarTablaHash(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="324" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m9" parent="Sistema" vertex="1" value="+ mostrarSalidas(codigo: string, desde: int, hasta: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="344" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m10" parent="Sistema" vertex="1" value="+ mostrarViajesDeUsuario(dni: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="364" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m11" parent="Sistema" vertex="1" value="+ listarBicisParaRevision(km: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="384" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m12" parent="Sistema" vertex="1" value="+ retirarBici(codigo: string, dni: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="404" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m13" parent="Sistema" vertex="1" value="+ devolverBici(codigo: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="424" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m14" parent="Sistema" vertex="1" value="+ enviarAlTaller(idBici: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="444" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m15" parent="Sistema" vertex="1" value="+ repararMasUrgente(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="464" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m16" parent="Sistema" vertex="1" value="+ agregarBici(id: int, codigoEstacion: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;tipo: string, estado: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;kilometros: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="484" width="370" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m17" parent="Sistema" vertex="1" value="+ mostrarBici(id: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="534" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m18" parent="Sistema" vertex="1" value="+ listarBicis(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="554" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m19" parent="Sistema" vertex="1" value="+ mostrarCantidadAveriadas(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="574" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m20" parent="Sistema" vertex="1" value="+ mostrarAltura(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="594" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m21" parent="Sistema" vertex="1" value="+ eliminarBici(id: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="614" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m22" parent="Sistema" vertex="1" value="+ redistribuir(capacidadCamion: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="634" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m23" parent="Sistema" vertex="1" value="- cargarEstaciones(ruta: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="654" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m24" parent="Sistema" vertex="1" value="- cargarCiclovias(ruta: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="674" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m25" parent="Sistema" vertex="1" value="- cargarBicicletas(ruta: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="694" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m26" parent="Sistema" vertex="1" value="- cargarViajes(ruta: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="714" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Sistema-m27" parent="Sistema" vertex="1" value="- valorParaOrdenar(estacion: Estacion*, porCapacidad: bool): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="734" width="370" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion" parent="1" vertex="1" value="Redistribucion" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="340" y="500" width="320" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-a0" parent="Redistribucion" vertex="1" value="- capacidadCamion: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-a1" parent="Redistribucion" vertex="1" value="- estaciones: Estacion**" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-a2" parent="Redistribucion" vertex="1" value="- elegidas: bool*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="66" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-a3" parent="Redistribucion" vertex="1" value="- cantidad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="86" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-a4" parent="Redistribucion" vertex="1" value="- cargadas: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="106" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-a5" parent="Redistribucion" vertex="1" value="- soluciones: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="126" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-sep" parent="Redistribucion" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="146" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-m0" parent="Redistribucion" vertex="1" value="+ Redistribucion(capacidadCamion: int, cantidad: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-m1" parent="Redistribucion" vertex="1" value="+ ~Redistribucion()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-m2" parent="Redistribucion" vertex="1" value="+ agregarEstacion(estacion: Estacion*): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="194" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-m3" parent="Redistribucion" vertex="1" value="+ resolver(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="214" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-m4" parent="Redistribucion" vertex="1" value="- explorar(indice: int, suma: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="234" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Redistribucion-m5" parent="Redistribucion" vertex="1" value="- mostrarSolucion(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="254" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias" parent="1" vertex="1" value="RedCiclovias" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="60" y="950" width="360" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-a0" parent="RedCiclovias" vertex="1" value="- cantidad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-a1" parent="RedCiclovias" vertex="1" value="- capacidad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-a2" parent="RedCiclovias" vertex="1" value="- codigos: string*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="66" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-a3" parent="RedCiclovias" vertex="1" value="- activos: bool*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="86" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-a4" parent="RedCiclovias" vertex="1" value="- adyacencia: Nodo&amp;lt;int&amp;gt;**" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="106" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-sep" parent="RedCiclovias" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="126" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m0" parent="RedCiclovias" vertex="1" value="+ RedCiclovias()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="134" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m1" parent="RedCiclovias" vertex="1" value="+ ~RedCiclovias()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m2" parent="RedCiclovias" vertex="1" value="+ agregarVertice(codigo: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m3" parent="RedCiclovias" vertex="1" value="+ agregarArista(a: string, b: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="194" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m4" parent="RedCiclovias" vertex="1" value="+ eliminarVertice(codigo: string): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="214" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m5" parent="RedCiclovias" vertex="1" value="+ mostrarCaminoMasCorto(origen: string, destino: string): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="234" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m6" parent="RedCiclovias" vertex="1" value="- buscarIndice(codigo: string): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="254" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m7" parent="RedCiclovias" vertex="1" value="- agrandar(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="274" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RedCiclovias-m8" parent="RedCiclovias" vertex="1" value="- agregarVecino(vertice: int, vecino: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="294" width="360" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash" parent="1" vertex="1" value="TablaHash" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="490" y="950" width="310" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-a0" parent="TablaHash" vertex="1" value="- tamanio: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-a1" parent="TablaHash" vertex="1" value="- cantidad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-a2" parent="TablaHash" vertex="1" value="- colisiones: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="66" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-a3" parent="TablaHash" vertex="1" value="- baldes: Nodo&amp;lt;Estacion*&amp;gt;**" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="86" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-sep" parent="TablaHash" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="106" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m0" parent="TablaHash" vertex="1" value="+ TablaHash(tamanio: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="114" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m1" parent="TablaHash" vertex="1" value="+ ~TablaHash()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="134" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m2" parent="TablaHash" vertex="1" value="+ insertar(estacion: Estacion*): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m3" parent="TablaHash" vertex="1" value="+ eliminar(codigo: string): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m4" parent="TablaHash" vertex="1" value="+ buscar(codigo: string): Estacion*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="194" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m5" parent="TablaHash" vertex="1" value="+ getCantidad(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="214" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m6" parent="TablaHash" vertex="1" value="+ getColisiones(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="234" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m7" parent="TablaHash" vertex="1" value="+ factorDeCarga(): double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="254" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m8" parent="TablaHash" vertex="1" value="+ mostrarBaldes(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="274" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m9" parent="TablaHash" vertex="1" value="+ copiarEstaciones(arrayEstaciones: Estacion**): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="294" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TablaHash-m10" parent="TablaHash" vertex="1" value="- funcionHash(codigo: string): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="314" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes" parent="1" vertex="1" value="ListaViajes" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="875" y="950" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-a0" parent="ListaViajes" vertex="1" value="- primero: Nodo&amp;lt;Viaje*&amp;gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-a1" parent="ListaViajes" vertex="1" value="- ultimo: Nodo&amp;lt;Viaje*&amp;gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-sep" parent="ListaViajes" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="66" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-m0" parent="ListaViajes" vertex="1" value="+ ListaViajes()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="74" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-m1" parent="ListaViajes" vertex="1" value="+ ~ListaViajes()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="94" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-m2" parent="ListaViajes" vertex="1" value="+ agregar(viaje: Viaje*): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="114" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-m3" parent="ListaViajes" vertex="1" value="+ estaVacia(): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="134" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-m4" parent="ListaViajes" vertex="1" value="+ contarSalidas(codigo: string, desde: int, hasta: int): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ListaViajes-m5" parent="ListaViajes" vertex="1" value="+ mostrarViajesDeUsuario(dni: int): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas" parent="1" vertex="1" value="ArbolBicicletas" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="1300" y="950" width="410" height="415" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-a0" parent="ArbolBicicletas" vertex="1" value="- raiz: NodoArbol&amp;lt;Bicicleta*&amp;gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-sep" parent="ArbolBicicletas" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="46" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m0" parent="ArbolBicicletas" vertex="1" value="+ ArbolBicicletas()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="54" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m1" parent="ArbolBicicletas" vertex="1" value="+ ~ArbolBicicletas()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="74" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m2" parent="ArbolBicicletas" vertex="1" value="+ insertarBicicletas(bici: Bicicleta*): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="94" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m3" parent="ArbolBicicletas" vertex="1" value="+ buscar(id: int, visitados: int&amp;amp;): Bicicleta*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="114" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m4" parent="ArbolBicicletas" vertex="1" value="+ listarInorder(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="134" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m5" parent="ArbolBicicletas" vertex="1" value="+ contarAveriadas(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m6" parent="ArbolBicicletas" vertex="1" value="+ calcularAltura(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m7" parent="ArbolBicicletas" vertex="1" value="+ listarConMasKm(km: int): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="194" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m8" parent="ArbolBicicletas" vertex="1" value="+ eliminar(id: int): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="214" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m9" parent="ArbolBicicletas" vertex="1" value="- liberar(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="234" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m10" parent="ArbolBicicletas" vertex="1" value="- insertarRecursivo(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*&amp;amp;, bici: Bicicleta*): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="254" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m11" parent="ArbolBicicletas" vertex="1" value="- buscarRecursivo(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;id: int, visitados: int&amp;amp;): Bicicleta*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="274" width="410" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m12" parent="ArbolBicicletas" vertex="1" value="- listarInorderRecursivo(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="309" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m13" parent="ArbolBicicletas" vertex="1" value="- contarAveriadasRecursivo(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="329" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m14" parent="ArbolBicicletas" vertex="1" value="- calcularAlturaRecursivo(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="349" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m15" parent="ArbolBicicletas" vertex="1" value="- listarConMasKmRecursivo(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*, km: int): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="369" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ArbolBicicletas-m16" parent="ArbolBicicletas" vertex="1" value="- eliminarRecursivo(nodo: NodoArbol&amp;lt;Bicicleta*&amp;gt;*&amp;amp;, id: int): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="389" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller" parent="1" vertex="1" value="HeapTaller" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="1830" y="950" width="220" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-a0" parent="HeapTaller" vertex="1" value="- datos: EntradaTaller*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-a1" parent="HeapTaller" vertex="1" value="- cantidad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-a2" parent="HeapTaller" vertex="1" value="- capacidad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="66" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-sep" parent="HeapTaller" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="86" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-m0" parent="HeapTaller" vertex="1" value="+ HeapTaller()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="94" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-m1" parent="HeapTaller" vertex="1" value="+ ~HeapTaller()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="114" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-m2" parent="HeapTaller" vertex="1" value="+ insertar(bici: Bicicleta*): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="134" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-m3" parent="HeapTaller" vertex="1" value="+ extraerMasUrgente(): Bicicleta*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-m4" parent="HeapTaller" vertex="1" value="+ contiene(idBici: int): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-m5" parent="HeapTaller" vertex="1" value="- subirNodo(indice: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="194" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-m6" parent="HeapTaller" vertex="1" value="- bajarNodo(indice: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="214" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="HeapTaller-m7" parent="HeapTaller" vertex="1" value="- redimensionar(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="234" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola" parent="1" vertex="1" value="Cola" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="200" y="1360" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-a0" parent="Cola" vertex="1" value="- frente: Nodo&amp;lt;int&amp;gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-a1" parent="Cola" vertex="1" value="- fin: Nodo&amp;lt;int&amp;gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-sep" parent="Cola" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="66" width="180" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-m0" parent="Cola" vertex="1" value="+ Cola()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="74" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-m1" parent="Cola" vertex="1" value="+ ~Cola()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="94" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-m2" parent="Cola" vertex="1" value="+ encolar(valor: int): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="114" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-m3" parent="Cola" vertex="1" value="+ desencolar(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="134" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-m4" parent="Cola" vertex="1" value="+ estaVacia(): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Cola-m5" parent="Cola" vertex="1" value="+ contiene(valor: int): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion" parent="1" vertex="1" value="Estacion" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="480" y="1360" width="270" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-a0" parent="Estacion" vertex="1" value="- codigo: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-a1" parent="Estacion" vertex="1" value="- nombre: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-a2" parent="Estacion" vertex="1" value="- barrio: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="66" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-a3" parent="Estacion" vertex="1" value="- capacidad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="86" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-a4" parent="Estacion" vertex="1" value="- bicisDisponibles: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="106" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-a5" parent="Estacion" vertex="1" value="- colaEspera: Cola" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="126" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-sep" parent="Estacion" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="146" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m0" parent="Estacion" vertex="1" value="+ Estacion(codigo: string, nombre: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;barrio: string, capacidad: int,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;bicisDisponibles: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="154" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m1" parent="Estacion" vertex="1" value="+ getCodigo(): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="204" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m2" parent="Estacion" vertex="1" value="+ getCapacidad(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="224" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m3" parent="Estacion" vertex="1" value="+ getBicisDisponibles(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="244" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m4" parent="Estacion" vertex="1" value="+ mostrar(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="264" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m5" parent="Estacion" vertex="1" value="+ tieneBajaOcupacion(): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="284" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m6" parent="Estacion" vertex="1" value="+ retirarBici(dni: int): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="304" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m7" parent="Estacion" vertex="1" value="+ devolverBici(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="324" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Estacion-m8" parent="Estacion" vertex="1" value="+ estaEnEspera(dni: int): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="344" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje" parent="1" vertex="1" value="Viaje" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="920" y="1360" width="300" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-a0" parent="Viaje" vertex="1" value="- id: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-a1" parent="Viaje" vertex="1" value="- idBici: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-a2" parent="Viaje" vertex="1" value="- dniUsuario: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="66" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-a3" parent="Viaje" vertex="1" value="- codigoOrigen: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="86" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-a4" parent="Viaje" vertex="1" value="- codigoDestino: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="106" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-a5" parent="Viaje" vertex="1" value="- fecha: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="126" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-a6" parent="Viaje" vertex="1" value="- duracionMin: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="146" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-sep" parent="Viaje" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="166" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-m0" parent="Viaje" vertex="1" value="+ Viaje(id: int, idBici: int, dniUsuario: int,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;codigoOrigen: string, codigoDestino: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;fecha: int, duracionMin: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="174" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-m1" parent="Viaje" vertex="1" value="+ getCodigoOrigen(): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="224" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-m2" parent="Viaje" vertex="1" value="+ getFecha(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="244" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-m3" parent="Viaje" vertex="1" value="+ getDniUsuario(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="264" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-m4" parent="Viaje" vertex="1" value="+ getDuracionMin(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="284" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Viaje-m5" parent="Viaje" vertex="1" value="+ mostrar(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="304" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Nodo" parent="1" vertex="1" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;Nodo" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="280" y="1760" width="180" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="Nodo-a0" parent="Nodo" vertex="1" value="+ dato: T" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="40" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Nodo-a1" parent="Nodo" vertex="1" value="+ siguiente: Nodo&amp;lt;T&amp;gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="60" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Nodo-T" parent="1" vertex="1" value="T" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;fontFamily=Helvetica;align=center;verticalAlign=middle;">
+          <mxGeometry x="446" y="1748" width="26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="NodoArbol" parent="1" vertex="1" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;NodoArbol" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="1330" y="1440" width="180" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="NodoArbol-a0" parent="NodoArbol" vertex="1" value="+ dato: T" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="40" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="NodoArbol-a1" parent="NodoArbol" vertex="1" value="+ izquierdo: NodoArbol&amp;lt;T&amp;gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="60" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="NodoArbol-a2" parent="NodoArbol" vertex="1" value="+ derecho: NodoArbol&amp;lt;T&amp;gt;*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="80" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="NodoArbol-T" parent="1" vertex="1" value="T" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=11;fontFamily=Helvetica;align=center;verticalAlign=middle;">
+          <mxGeometry x="1496" y="1428" width="26" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta" parent="1" vertex="1" value="Bicicleta" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="1630" y="1440" width="270" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-a0" parent="Bicicleta" vertex="1" value="- idBici: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="26" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-a1" parent="Bicicleta" vertex="1" value="- codigoEstacion: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="46" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-a2" parent="Bicicleta" vertex="1" value="- electrica: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="66" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-a3" parent="Bicicleta" vertex="1" value="- averiada: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="86" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-a4" parent="Bicicleta" vertex="1" value="- kilometros: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="106" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-sep" parent="Bicicleta" vertex="1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;">
+          <mxGeometry y="126" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-m0" parent="Bicicleta" vertex="1" value="+ Bicicleta(idBici: int, codigoEstacion: string,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;electrica: bool, averiada: bool,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;kilometros: int)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="134" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-m1" parent="Bicicleta" vertex="1" value="+ getId(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="184" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-m2" parent="Bicicleta" vertex="1" value="+ getKilometros(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="204" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-m3" parent="Bicicleta" vertex="1" value="+ estaAveriada(): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="224" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-m4" parent="Bicicleta" vertex="1" value="+ getPrioridad(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="244" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-m5" parent="Bicicleta" vertex="1" value="+ mostrar(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="264" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Bicicleta-m6" parent="Bicicleta" vertex="1" value="+ reparar(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="284" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EntradaTaller" parent="1" vertex="1" value="&lt;span style=&quot;font-weight:normal;&quot;&gt;«struct»&lt;/span&gt;&lt;br&gt;EntradaTaller" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=6;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#FFFFFF;fontSize=13;fontFamily=Helvetica;">
+          <mxGeometry x="1865" y="1290" width="150" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="EntradaTaller-a0" parent="EntradaTaller" vertex="1" value="+ bici: Bicicleta*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="40" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="EntradaTaller-a1" parent="EntradaTaller" vertex="1" value="+ prioridad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=12;fontFamily=Helvetica;">
+          <mxGeometry y="60" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nota-redis" parent="1" vertex="1" value="Punto D. La crea Sistema::redistribuir como variable local y le carga las estaciones de la tabla. Solo las apunta (asociación): las destruye TablaHash. El faltante de cada una es capacidad − bicisDisponibles, y entran solo las que dan más de 0." style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=2;fillColor=#FFFFFF;strokeColor=#999999;fontSize=11;fontColor=#333333;fontFamily=Helvetica;">
+          <mxGeometry x="100" y="500" width="210" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="nota-taller" parent="1" vertex="1" value="El heap no es dueño de las bicis: EntradaTaller solo las apunta (asociación). Las destruye ArbolBicicletas." style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=left;spacingLeft=8;spacingRight=8;spacingTop=2;fillColor=#FFFFFF;strokeColor=#999999;fontSize=11;fontColor=#333333;fontFamily=Helvetica;">
+          <mxGeometry x="1920" y="1440" width="175" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-Sistema-RedCiclovias" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0;exitY=0.434211;exitDx=0;exitDy=0;entryX=0.055556;entryY=0;entryDx=0;entryDy=0;" source="Sistema" target="RedCiclovias">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Sistema-RedCiclovias-e0" parent="comp-Sistema-RedCiclovias" vertex="1" connectable="0" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Sistema-TablaHash" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="Sistema" target="TablaHash">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="961" y="920" />
+              <mxPoint x="645" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Sistema-TablaHash-e0" parent="comp-Sistema-TablaHash" vertex="1" connectable="0" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Sistema-ArbolBicicletas" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.7;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="Sistema" target="ArbolBicicletas">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1109" y="920" />
+              <mxPoint x="1505" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Sistema-ArbolBicicletas-e0" parent="comp-Sistema-ArbolBicicletas" vertex="1" connectable="0" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Sistema-HeapTaller" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.9;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="Sistema" target="HeapTaller">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1183" y="895" />
+              <mxPoint x="1940" y="895" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Sistema-HeapTaller-e0" parent="comp-Sistema-HeapTaller" vertex="1" connectable="0" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Sistema-ListaViajes" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="Sistema" target="ListaViajes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-Sistema-ListaViajes-e0" parent="comp-Sistema-ListaViajes" vertex="1" connectable="0" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dep-Sistema-Redistribucion" parent="1" edge="1" value="«usa»" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;dashed=1;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.697368;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" source="Sistema" target="Redistribucion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="asoc-Redistribucion-Estacion" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=0.359375;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.108108;entryDx=0;entryDy=0;" source="Redistribucion" target="Estacion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="455" y="1400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="asoc-Redistribucion-Estacion-e0" parent="asoc-Redistribucion-Estacion" vertex="1" connectable="0" value="0..1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="6" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="asoc-Redistribucion-Estacion-e1" parent="asoc-Redistribucion-Estacion" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="-34" y="6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dep-RedCiclovias-Cola" parent="1" edge="1" value="«usa»" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;dashed=1;labelBackgroundColor=#FFFFFF;exitX=0.638889;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="RedCiclovias" target="Cola">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-RedCiclovias-Nodo" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.083333;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" source="RedCiclovias" target="Nodo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="1803" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-RedCiclovias-Nodo-e0" parent="comp-RedCiclovias-Nodo" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="-28" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Cola-Nodo" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.666667;exitY=1;exitDx=0;exitDy=0;entryX=0.222222;entryY=0;entryDx=0;entryDy=0;" source="Cola" target="Nodo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-Cola-Nodo-e0" parent="comp-Cola-Nodo" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-Estacion-Cola" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0;exitY=0.27027;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" source="Estacion" target="Cola">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-Estacion-Cola-e0" parent="comp-Estacion-Cola" vertex="1" connectable="0" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-TablaHash-Estacion" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.403226;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="TablaHash" target="Estacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-TablaHash-Estacion-e0" parent="comp-TablaHash-Estacion" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-TablaHash-Nodo" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.951613;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.348837;entryDx=0;entryDy=0;" source="TablaHash" target="Nodo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="785" y="1790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-TablaHash-Nodo-e0" parent="comp-TablaHash-Nodo" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-ListaViajes-Nodo" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.046875;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.813953;entryDx=0;entryDy=0;" source="ListaViajes" target="Nodo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="1830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-ListaViajes-Nodo-e0" parent="comp-ListaViajes-Nodo" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-ListaViajes-Viaje" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.609375;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="ListaViajes" target="Viaje">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-ListaViajes-Viaje-e0" parent="comp-ListaViajes-Viaje" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lazo-Nodo-siguiente" parent="1" edge="1" value="siguiente&lt;br&gt;0..1" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;labelBackgroundColor=#FFFFFF;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" source="Nodo" target="Nodo">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="22" as="offset" />
+            <Array as="points">
+              <mxPoint x="325" y="1872" />
+              <mxPoint x="415" y="1872" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-ArbolBicicletas-NodoArbol" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.292683;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="ArbolBicicletas" target="NodoArbol">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-ArbolBicicletas-NodoArbol-e0" parent="comp-ArbolBicicletas-NodoArbol" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-ArbolBicicletas-Bicicleta" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.95122;exitY=1;exitDx=0;exitDy=0;entryX=0.222222;entryY=0;entryDx=0;entryDy=0;" source="ArbolBicicletas" target="Bicicleta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-ArbolBicicletas-Bicicleta-e0" parent="comp-ArbolBicicletas-Bicicleta" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-HeapTaller-EntradaTaller" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=diamondThin;startFill=1;startSize=14;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" source="HeapTaller" target="EntradaTaller">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-HeapTaller-EntradaTaller-e0" parent="comp-HeapTaller-EntradaTaller" vertex="1" connectable="0" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="asoc-EntradaTaller-Bicicleta" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;exitX=0.1;exitY=1;exitDx=0;exitDy=0;entryX=0.925926;entryY=0;entryDx=0;entryDy=0;" source="EntradaTaller" target="Bicicleta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="asoc-EntradaTaller-Bicicleta-e0" parent="asoc-EntradaTaller-Bicicleta" vertex="1" connectable="0" value="0..1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="6" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="asoc-EntradaTaller-Bicicleta-e1" parent="asoc-EntradaTaller-Bicicleta" vertex="1" connectable="0" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;fontSize=11;fontFamily=Helvetica;">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lazo-NodoArbol-izquierdo" parent="1" edge="1" value="izquierdo&lt;br&gt;0..1" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.433962;exitDx=0;exitDy=0;entryX=0;entryY=0.811321;entryDx=0;entryDy=0;" source="NodoArbol" target="NodoArbol">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-36" y="0" as="offset" />
+            <Array as="points">
+              <mxPoint x="1304" y="1486" />
+              <mxPoint x="1304" y="1526" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lazo-NodoArbol-derecho" parent="1" edge="1" value="derecho&lt;br&gt;0..1" style="rounded=0;html=1;strokeColor=#333333;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=open;endSize=12;startArrow=none;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.433962;exitDx=0;exitDy=0;entryX=1;entryY=0.811321;entryDx=0;entryDy=0;" source="NodoArbol" target="NodoArbol">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="36" y="0" as="offset" />
+            <Array as="points">
+              <mxPoint x="1536" y="1486" />
+              <mxPoint x="1536" y="1526" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nota-redis-linea" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#999999;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=none;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.2;entryDx=0;entryDy=0;" source="nota-redis" target="Redistribucion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nota-taller-linea" parent="1" edge="1" value="" style="rounded=0;html=1;strokeColor=#999999;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;endArrow=none;startArrow=none;dashed=1;exitX=0.271429;exitY=0;exitDx=0;exitDy=0;entryX=0.683333;entryY=1;entryDx=0;entryDy=0;" source="nota-taller" target="EntradaTaller">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
