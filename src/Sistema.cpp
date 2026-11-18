@@ -258,7 +258,9 @@ void Sistema::mostrarRecorrido(string origen, string destino) {
         return;
     }
 
-    this->ciclovias.mostrarCaminoMasCorto(origen, destino);
+    if(!this->ciclovias.mostrarCaminoMasCorto(origen, destino)) {
+        cout << "No existe recorrido entre " << origen << " y " << destino << endl;
+    }
 
 }
 
@@ -266,21 +268,23 @@ void Sistema::mostrarRecorrido(string origen, string destino) {
 
 void Sistema::mostrarSalidas(string codigo, int desde, int hasta) {
 
-    if (this->estaciones.buscar(codigo) == nullptr) {
-        cout << "La estacion " << codigo << " no existe" << endl;
-        return;
-    }
-
     if (desde > hasta) {
         cout << "La fecha inicial es posterior a la final" << endl;
         return;
     }
 
+    if (this->estaciones.buscar(codigo) == nullptr) {
+        cout << "La estacion " << codigo << " no esta actualmente en el sistema, se cuentan igualmente sus viajes registrados." << endl;
+    }
+
     int cantidad = this->viajes.contarSalidas(codigo, desde, hasta);
 
-    cout << "Viajes que salieron de " << codigo << " entre " << desde
-         << " y " << hasta << ": " << cantidad << endl;
-
+    if (cantidad == 0) {
+        cout << "Ningun viaje salio de " << codigo << " entre " << desde << " y " << hasta << endl;
+    } else {
+        cout << "Viajes que salieron de " << codigo << " entre " << desde
+            << " y " << hasta << ": " << cantidad << endl;
+    }
 }
 
 void Sistema::mostrarViajesDeUsuario(int dni) {
@@ -320,6 +324,13 @@ void Sistema::retirarBici(string codigo, int dni) {
         cout << "DNI invalido" << endl;
         return;
     }
+
+    if (estacion->estaEnEspera(dni))
+    {
+        cout << "El usuario " << dni << " ya se encuentra en espera en la estacion " << codigo << endl;
+        return;
+    }
+    
 
     if (estacion->retirarBici(dni)) {
         cout << "El usuario " << dni << " retiro una bici de " << codigo
