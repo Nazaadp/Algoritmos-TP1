@@ -61,3 +61,19 @@ int Cola::desencolar() {
     delete nodoAux;
     return valor;
 };
+
+bool Cola::contiene(int valor) {
+
+    Nodo<int>* nodoAux = this->frente;
+
+    while (nodoAux != nullptr)
+    {
+        if(nodoAux->dato == valor){
+            return true;
+        }
+
+        nodoAux = nodoAux->siguiente;
+    }
+    
+    return false;
+}

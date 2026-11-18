@@ -29,6 +29,7 @@ class Estacion
 
         bool retirarBici(int dni);
         int devolverBici();
+        bool estaEnEspera(int dni);
 
 };
 

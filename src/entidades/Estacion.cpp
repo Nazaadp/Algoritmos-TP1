@@ -72,3 +72,9 @@ int Estacion::devolverBici() {
     return -1;
 
 }
+
+bool Estacion::estaEnEspera(int dni) {
+
+    return this->colaEspera.contiene(dni);
+
+}

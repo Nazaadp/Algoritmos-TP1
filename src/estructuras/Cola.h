@@ -16,6 +16,7 @@ class Cola
         void encolar(int valor);
         int desencolar();
         bool estaVacia();
+        bool contiene(int valor);
 };
 
 #endif
