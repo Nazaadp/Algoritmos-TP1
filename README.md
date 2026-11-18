@@ -4,7 +4,7 @@
 
 El proyecto consiste en desarrollar un sistema de gestión de estaciones de bicicletas públicas de la Ciudad de Buenos Aires, utilizando programación orientada a objetos y estructuras de datos dinámicas implementadas manualmente en C++.
 
-El sistema permite administrar estaciones, bicicletas y viajes, además de gestionar solicitudes de bicicletas, recorridos entre estaciones y el mantenimiento de bicicletas averiadas.
+El sistema permite administrar estaciones, bicicletas y viajes, además de gestionar solicitudes de bicicletas, recorridos entre estaciones, el mantenimiento de bicicletas averiadas y redistribucion de bicicletas a estaciones.
 
 ## 2. Compilación y ejecución
 
@@ -31,7 +31,7 @@ cd src
 Una vez dentro de `src`, ejecutar:
 
 ```bash
-g++ -std=c++17 -Wall -Wextra main.cpp Sistema.cpp estructuras/*.cpp entidades/*.cpp -o TPBici.exe
+g++ -std=c++17 -Wall -Wextra main.cpp Sistema.cpp estructuras/*.cpp entidades/*.cpp algoritmos/*.cpp -o TPBici.exe
 ```
 
 #### Paso 4: Ejecutar el programa
@@ -62,6 +62,12 @@ Contiene las implementaciones propias de las estructuras de datos utilizadas:
 - **HeapTaller:** montículo mínimo (min-heap) utilizado para organizar las bicicletas que requieren reparación según su prioridad.
 - **ListaViajes:** lista enlazada que permite almacenar y administrar los viajes realizados. Incluye funcionalidades para contar las salidas de una estación dentro de un período determinado y mostrar los viajes de un usuario.
 - **RedCiclovias:** representa la red de ciclovías mediante un grafo no dirigido implementado con listas de adyacencia. Permite agregar y eliminar vértices, agregar conexiones entre estaciones y calcular el camino de menos tramos mediante BFS.
+
+### Algoritmos
+
+Contiene la implementación propia del algoritmo de backtracking:
+
+- **Redistribucion:** resuelve la redistribución de bicicletas mediante backtracking. Busca todos los subconjuntos de estaciones cuyos faltantes (capacidad menos bicicletas disponibles) suman exactamente la capacidad del camión. La crea `Sistema::redistribuir` como variable local y apunta a las estaciones de la `TablaHash`: las consulta sin modificarlas y no las libera.
 
 
 ### Sistema
@@ -179,3 +185,20 @@ Si las bicicletas se cargaran ordenadas por ID, el ABB quedaría completamente d
 Por ejemplo, si se insertan las bicicletas con los ID 1, 2, 3, 4 y 5, cada nuevo nodo se ubicaría como hijo derecho del anterior. El árbol tendría una altura de 5 niveles.
 
 Esto afecta negativamente el costo de búsqueda, ya que en lugar de tener una complejidad O(log n), como ocurriría en un árbol equilibrado, pasaría a ser O(n) en el peor caso. Esto se debe a que sería necesario recorrer los nodos uno por uno hasta encontrar la bicicleta buscada.
+
+
+### D. Redistribución con backtracking
+
+#### Encontrar todos los subconjuntos de estaciones cuyos faltantes suman exactamente la capacidad C del camión. Si no hay ninguno, informarlo.
+
+**Resolución**
+
+El faltante de cada estación se calcula como su capacidad menos las bicicletas disponibles, y solo participan las estaciones con faltante mayor a 0. La función recursiva `explorar` recorre las estaciones en orden de ingreso y, para cada una, prueba dos caminos: llevarla en la combinación o no llevarla. Si la suma llega exactamente a C, se muestra la solución, si la supera, se descarta ese camino. Al volver de una rama, la estación se desmarca para que no aparezca en las combinaciones siguientes.
+
+**Complejidad temporal:** `O(2^n)`
+
+La búsqueda tiene una complejidad temporal O(2^n), donde *n* representa la cantidad de estaciones con faltante mayor a 0. Esto se debe a que cada estación duplica la cantidad de caminos posibles, por lo que el árbol de decisiones tiene 2^n hojas y 2^(n+1) − 1 llamadas en total, cada una con un costo constante. El peor caso ocurre cuando C es mayor o igual que la suma de todos los faltantes, porque ninguna suma parcial lo supera y ninguna rama se corta antes de llegar a la ultima estacion. Si además se cuenta mostrar cada solución, que recorre las *n* estaciones, la cota es O(n · 2^n).
+
+**Estructura elegida: Array**
+
+Se eligieron dos array del mismo tamaño: uno de punteros a `Estacion` y otro de `bool` que marca las estaciones de la combinación que se está armando. Los array permiten acceder a cada estación por su posición en O(1), que es lo que necesita la recursión, y su tamaño se conoce de antemano a partir de la cantidad de estaciones de la tabla. Se guardan punteros en lugar de copias porque la `Redistribucion` solo consulta las estaciones: no es dueña de ellas y no las libera. 
