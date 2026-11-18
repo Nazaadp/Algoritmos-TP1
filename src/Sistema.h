@@ -60,6 +60,9 @@ class Sistema
         void mostrarAltura();
         void eliminarBici(int id);
 
+        // D. Redistribucion
+        void redistribuir(int capacidadCamion);
+
 };
 
 

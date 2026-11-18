@@ -229,6 +229,27 @@ void menuBicicletas(Sistema& sistema) {
 
 }
 
+void menuRedistribucion(Sistema& sistema) {
+
+    int capacidadCamion = -1;
+
+    while (capacidadCamion != 0) {
+
+        cout << endl << "--- D. Redistribucion de bicicletas ---" << endl;
+        cout << "Especificar la capacidad del camion en un numero entero (0 para volver al menu)" << endl;
+
+        capacidadCamion = leerEntero("Capacidad del camion: ");
+
+        if (capacidadCamion > 0) {
+
+            sistema.redistribuir(capacidadCamion);
+
+        } else if (capacidadCamion < 0) {
+            cout << "No es posible ingresar una cantidad menor a 0" << endl;
+        }
+    }
+}
+
 int main() {
 
     Sistema sistema;
@@ -242,6 +263,7 @@ int main() {
         cout << "1. A. Gestion de estaciones" << endl;
         cout << "2. B. Viajes y colas de espera" << endl;
         cout << "3. C. Registro de bicicletas" << endl;
+        cout << "4. D. Redistribucion de bicicletas" << endl;
         cout << "0. Salir" << endl;
 
         opcion = leerEntero("Opcion: ");
@@ -252,6 +274,8 @@ int main() {
             menuViajes(sistema);
         } else if (opcion == 3) {
             menuBicicletas(sistema);
+        } else if (opcion == 4) {
+            menuRedistribucion(sistema);
         } else if (opcion != 0) {
             cout << "Opcion invalida" << endl;
         }

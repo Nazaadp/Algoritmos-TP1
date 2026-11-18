@@ -5,6 +5,7 @@
 #include "entidades/Bicicleta.h"
 #include "entidades/Viaje.h"
 #include "estructuras/TablaHash.h"
+#include "algoritmos/Redistribucion.h"
 
 using namespace std;
 
@@ -492,4 +493,31 @@ void Sistema::eliminarBici(int id) {
         cout << "No existe la bici " << id << endl;
     }
 
+}
+
+// D Redistribucion
+
+void Sistema::redistribuir(int capacidadCamion) {
+
+    if (capacidadCamion <= 0)
+    {
+        cout << "La capacidad del camion debe ser mayor a 0" << endl;
+        return;
+    }
+
+    int cantidad = this->estaciones.getCantidad();
+    Estacion** arrayEstaciones = new Estacion*[cantidad];
+
+    this->estaciones.copiarEstaciones(arrayEstaciones);
+
+    Redistribucion camion(capacidadCamion, cantidad);
+
+    for (int i=0; i<cantidad; i++)
+    {
+        camion.agregarEstacion(arrayEstaciones[i]);
+    }
+
+    delete[] arrayEstaciones;
+
+    camion.resolver();
 }

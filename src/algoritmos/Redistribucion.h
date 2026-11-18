@@ -1,27 +1,30 @@
 #ifndef REDISTRIBUCION_H
 #define REDISTRIBUCION_H
 
-#include <string>
-using namespace std;
+#include "../entidades/Estacion.h"
 
 class Redistribucion
 {
     private:
+
         int capacidadCamion;
 
-        string* codigos;
-        int* faltantes;
+        Estacion** estaciones;
         bool* elegidas;
 
         int cantidad;
         int cargadas;
         int soluciones;
 
+        void explorar(int indice, int suma);
+        void mostrarSolucion();
+
     public:
         Redistribucion(int capacidadCamion, int cantidad);
         ~Redistribucion();
 
-        bool agregarEstacion(string codigo, int faltante);
+        bool agregarEstacion(Estacion* estacion);
+        void resolver();
 };
 
 
